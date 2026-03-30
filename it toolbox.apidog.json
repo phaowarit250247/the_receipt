@@ -1,0 +1,3002 @@
+{
+  "apidogProject": "1.0.0",
+  "$schema": {
+    "app": "apidog",
+    "type": "project",
+    "version": "1.2.0"
+  },
+  "info": {
+    "name": "it toolbox",
+    "description": "",
+    "mockRule": {
+      "rules": [],
+      "enableSystemRule": true
+    }
+  },
+  "projectSetting": {
+    "id": "1225523",
+    "auth": {},
+    "securityScheme": {},
+    "gateway": [],
+    "language": "en-US",
+    "apiStatuses": [
+      "developing",
+      "testing",
+      "released",
+      "deprecated"
+    ],
+    "mockSettings": {},
+    "preProcessors": [],
+    "postProcessors": [],
+    "advancedSettings": {
+      "enableJsonc": true,
+      "enableBigint": false,
+      "responseValidate": true,
+      "enableTestScenarioSetting": false,
+      "enableYAPICompatScript": false,
+      "isDefaultUrlEncoding": 3,
+      "publishedDocUrlRules": {
+        "defaultRule": "SLUGIFY_WITH_RESOURCE_KEY",
+        "resourceKeyStandard": "NEW"
+      }
+    },
+    "initialDisabledMockIds": [],
+    "servers": [
+      {
+        "id": "default",
+        "name": "Default Server",
+        "moduleId": 1130419
+      }
+    ],
+    "cloudMock": {
+      "security": "free",
+      "enable": false,
+      "tokenKey": "apidogToken"
+    }
+  },
+  "apiCollection": [
+    {
+      "name": "Root",
+      "id": 7204323,
+      "auth": {},
+      "securityScheme": {},
+      "parentId": 0,
+      "serverId": "",
+      "description": "",
+      "identityPattern": {
+        "httpApi": {
+          "type": "methodAndPath",
+          "bodyType": "",
+          "fields": []
+        }
+      },
+      "shareSettings": {},
+      "visibility": "SHARED",
+      "moduleId": 1130419,
+      "preProcessors": [
+        {
+          "id": "inheritProcessors",
+          "type": "inheritProcessors",
+          "data": {}
+        }
+      ],
+      "postProcessors": [
+        {
+          "id": "inheritProcessors",
+          "type": "inheritProcessors",
+          "data": {}
+        }
+      ],
+      "inheritPostProcessors": {},
+      "inheritPreProcessors": {},
+      "items": [
+        {
+          "name": "Project_ubu",
+          "id": 7204451,
+          "auth": {},
+          "securityScheme": {},
+          "parentId": 0,
+          "serverId": "",
+          "description": "",
+          "identityPattern": {
+            "httpApi": {
+              "type": "inherit",
+              "bodyType": "",
+              "fields": []
+            }
+          },
+          "shareSettings": {},
+          "visibility": "INHERITED",
+          "moduleId": 1130419,
+          "preProcessors": [
+            {
+              "id": "inheritProcessors",
+              "type": "inheritProcessors",
+              "data": {}
+            }
+          ],
+          "postProcessors": [
+            {
+              "id": "inheritProcessors",
+              "type": "inheritProcessors",
+              "data": {}
+            }
+          ],
+          "inheritPostProcessors": {},
+          "inheritPreProcessors": {},
+          "items": [
+            {
+              "name": "purchases",
+              "id": 7204453,
+              "auth": {},
+              "securityScheme": {},
+              "parentId": 7204451,
+              "serverId": "",
+              "description": "",
+              "identityPattern": {
+                "httpApi": {
+                  "type": "inherit",
+                  "bodyType": "",
+                  "fields": []
+                }
+              },
+              "shareSettings": {},
+              "visibility": "INHERITED",
+              "moduleId": 1130419,
+              "preProcessors": [
+                {
+                  "id": "inheritProcessors",
+                  "type": "inheritProcessors",
+                  "data": {}
+                }
+              ],
+              "postProcessors": [
+                {
+                  "id": "inheritProcessors",
+                  "type": "inheritProcessors",
+                  "data": {}
+                }
+              ],
+              "inheritPostProcessors": {},
+              "inheritPreProcessors": {},
+              "items": [
+                {
+                  "name": "สร้างใบสั่งซื้อ",
+                  "api": {
+                    "id": "30570908",
+                    "method": "post",
+                    "path": "http://192.168.1.94:8000/api/purchases/1",
+                    "parameters": {
+                      "query": [],
+                      "path": [],
+                      "cookie": [],
+                      "header": []
+                    },
+                    "auth": {
+                      "type": "bearer",
+                      "bearer": {
+                        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhZGRwYXktZXF1aXBtZW50LXN5c3RlbSIsImF1ZCI6IndlYiIsInN1YiI6MSwiaWF0IjoxNzczMTA3ODM2LCJleHAiOjE3NzMxOTQyMzYsIm5iZiI6MTc3MzEwNzgzNiwiZGF0YSI6eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBhZGRwYXkuY29tIiwicm9sZSI6IkFkbWluIn19.Wg0ePOBpKk16cJOjx0ILbzzyF9BcyaOj4CVEqH-GoVE"
+                      }
+                    },
+                    "securityScheme": {},
+                    "commonParameters": {
+                      "query": [],
+                      "body": [],
+                      "cookie": [],
+                      "header": []
+                    },
+                    "responses": [
+                      {
+                        "id": "154887806",
+                        "code": 200,
+                        "name": "Success",
+                        "headers": [],
+                        "jsonSchema": {
+                          "type": "object",
+                          "properties": {},
+                          "x-apidog-orders": []
+                        },
+                        "itemSchema": {},
+                        "description": "",
+                        "contentType": "json",
+                        "mediaType": ""
+                      }
+                    ],
+                    "responseExamples": [
+                      {
+                        "name": "Unauthorized",
+                        "data": "{\"error\":\"Token not provided\"}",
+                        "responseId": 154887806,
+                        "description": "",
+                        "oasKey": "",
+                        "oasExtensions": ""
+                      }
+                    ],
+                    "requestBody": {
+                      "type": "application/json",
+                      "parameters": [],
+                      "jsonSchema": {
+                        "type": "object",
+                        "properties": {},
+                        "x-apidog-orders": []
+                      },
+                      "mediaType": "",
+                      "examples": [
+                        {
+                          "mediaType": "application/json",
+                          "value": "{\r\n  \"id\": 1,\r\n  \"po_number\": \"PO-2026-001\",\r\n  \"vendor_name\": \"Dell Thailand Co., Ltd.\",\r\n  \"purchase_date\": \"2026-03-01\",\r\n  \"warranty_expire_date\": \"2029-03-01\",\r\n  \"sequence\": \"001\",\r\n  \"tax_id\": \"0101234567890\",\r\n  \"branch\": \"สำนักงานใหญ่\",\r\n  \"item_value\": 150000.00,\r\n  \"vat_amount\": 10500.00,\r\n  \"total_amount\": 160500.00,\r\n  \"notes\": \"สั่งซื้ออุปกรณ์คอมพิวเตอร์สำหรับแผนก IT\",\r\n  \"created_at\": \"2026-03-01T10:00:00.000000Z\",\r\n  \"updated_at\": \"2026-03-01T10:00:00.000000Z\"\r\n}"
+                        }
+                      ],
+                      "oasExtensions": ""
+                    },
+                    "description": "",
+                    "tags": [],
+                    "status": "developing",
+                    "serverId": "",
+                    "operationId": "",
+                    "sourceUrl": "",
+                    "ordering": 6,
+                    "cases": [],
+                    "mocks": [],
+                    "customApiFields": "{}",
+                    "advancedSettings": {
+                      "disabledSystemHeaders": {}
+                    },
+                    "mockScript": {},
+                    "codeSamples": [],
+                    "commonResponseStatus": {},
+                    "responseChildren": [],
+                    "visibility": "INHERITED",
+                    "moduleId": 1130419,
+                    "oasExtensions": "",
+                    "type": "http",
+                    "preProcessors": [],
+                    "postProcessors": [],
+                    "inheritPostProcessors": {},
+                    "inheritPreProcessors": {}
+                  }
+                },
+                {
+                  "name": " ดูรายชื่อใบสั่งซื้อทั้งหมด",
+                  "api": {
+                    "id": "30570909",
+                    "method": "get",
+                    "path": "http://192.168.1.94:8000/api/purchases/7",
+                    "parameters": {
+                      "query": [],
+                      "path": [],
+                      "cookie": [],
+                      "header": []
+                    },
+                    "auth": {
+                      "type": "bearer",
+                      "bearer": {
+                        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhZGRwYXktZXF1aXBtZW50LXN5c3RlbSIsImF1ZCI6IndlYiIsInN1YiI6MSwiaWF0IjoxNzczMzg1OTc3LCJleHAiOjE3NzM0NzIzNzcsIm5iZiI6MTc3MzM4NTk3NywiZGF0YSI6eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBhZGRwYXkuY29tIiwicm9sZSI6IkFkbWluIn19.G1rU3jQs1rAZkL9fA3Q1en1h-eFR_rhoYy9SILUzmiM"
+                      }
+                    },
+                    "securityScheme": {},
+                    "commonParameters": {
+                      "query": [],
+                      "body": [],
+                      "cookie": [],
+                      "header": []
+                    },
+                    "responses": [
+                      {
+                        "id": "150654010",
+                        "code": 200,
+                        "name": "Success",
+                        "headers": [],
+                        "jsonSchema": {
+                          "type": "object",
+                          "properties": {},
+                          "x-apidog-orders": []
+                        },
+                        "itemSchema": {},
+                        "description": "",
+                        "contentType": "json",
+                        "mediaType": ""
+                      }
+                    ],
+                    "responseExamples": [
+                      {
+                        "name": "OK",
+                        "data": "[{\"id\":1,\"po_number\":\"PO-2024-001\",\"vendor_name\":\"Dell Technologies\",\"purchase_date\":\"2024-01-15T00:00:00.000000Z\",\"warranty_expire_date\":\"2027-01-15T00:00:00.000000Z\",\"created_at\":\"2026-03-05T07:33:25.000000Z\",\"updated_at\":\"2026-03-05T07:33:25.000000Z\"}]",
+                        "responseId": 150654010,
+                        "description": "",
+                        "oasKey": "",
+                        "oasExtensions": ""
+                      }
+                    ],
+                    "requestBody": {
+                      "type": "none",
+                      "parameters": [],
+                      "mediaType": "",
+                      "examples": [],
+                      "oasExtensions": ""
+                    },
+                    "description": "",
+                    "tags": [],
+                    "status": "developing",
+                    "serverId": "",
+                    "operationId": "",
+                    "sourceUrl": "",
+                    "ordering": 12,
+                    "cases": [],
+                    "mocks": [],
+                    "customApiFields": "{}",
+                    "advancedSettings": {
+                      "disabledSystemHeaders": {}
+                    },
+                    "mockScript": {},
+                    "codeSamples": [],
+                    "commonResponseStatus": {},
+                    "responseChildren": [],
+                    "visibility": "INHERITED",
+                    "moduleId": 1130419,
+                    "oasExtensions": "",
+                    "type": "http",
+                    "preProcessors": [],
+                    "postProcessors": [],
+                    "inheritPostProcessors": {},
+                    "inheritPreProcessors": {}
+                  }
+                },
+                {
+                  "name": "แก้ไขข้อมูลใบสั่งซื้อ",
+                  "api": {
+                    "id": "30570910",
+                    "method": "put",
+                    "path": "http://192.168.1.109:8000/api/purchases/1",
+                    "parameters": {
+                      "path": [],
+                      "query": [],
+                      "cookie": [],
+                      "header": []
+                    },
+                    "auth": {
+                      "type": "bearer",
+                      "bearer": {
+                        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhZGRwYXktZXF1aXBtZW50LXN5c3RlbSIsImF1ZCI6IndlYiIsInN1YiI6MSwiaWF0IjoxNzcyNjk1ODY1LCJleHAiOjE3NzI3ODIyNjUsIm5iZiI6MTc3MjY5NTg2NSwiZGF0YSI6eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBhZGRwYXkuY29tIiwicm9sZSI6IkFkbWluIn19.98vwhNqTP9_LgpziuOTk7nRJBrWZoSWxxidOYPdRFj8"
+                      }
+                    },
+                    "securityScheme": {},
+                    "commonParameters": {
+                      "query": [],
+                      "body": [],
+                      "cookie": [],
+                      "header": []
+                    },
+                    "responses": [
+                      {
+                        "id": "137251893",
+                        "code": 200,
+                        "name": "Success",
+                        "headers": [],
+                        "jsonSchema": {
+                          "type": "object",
+                          "properties": {},
+                          "x-apidog-orders": []
+                        },
+                        "itemSchema": {},
+                        "description": "",
+                        "contentType": "json",
+                        "mediaType": ""
+                      }
+                    ],
+                    "responseExamples": [],
+                    "requestBody": {
+                      "type": "application/json",
+                      "parameters": [],
+                      "jsonSchema": {
+                        "type": "object",
+                        "properties": {},
+                        "x-apidog-orders": []
+                      },
+                      "examples": [
+                        {
+                          "mediaType": "application/json",
+                          "value": "{\r\n  \"id\": 1,\r\n  \"po_number\": \"PO-2024-001\",\r\n  \"vendor_name\": \"Dell Technologies Updated\",\r\n  \"purchase_date\": \"2024-01-15\",\r\n  \"warranty_expire_date\": \"2028-01-15\",\r\n  \"updated_at\": \"2026-03-04T10:00:00.000000Z\"\r\n}"
+                        }
+                      ],
+                      "mediaType": "",
+                      "oasExtensions": "",
+                      "required": true,
+                      "additionalContentTypes": []
+                    },
+                    "description": "",
+                    "tags": [],
+                    "status": "developing",
+                    "serverId": "",
+                    "operationId": "",
+                    "sourceUrl": "",
+                    "ordering": 18,
+                    "cases": [],
+                    "mocks": [],
+                    "customApiFields": "{}",
+                    "advancedSettings": {
+                      "disabledSystemHeaders": {}
+                    },
+                    "mockScript": {},
+                    "codeSamples": [],
+                    "commonResponseStatus": {},
+                    "responseChildren": [],
+                    "visibility": "INHERITED",
+                    "moduleId": 1130419,
+                    "oasExtensions": "",
+                    "type": "http",
+                    "preProcessors": [],
+                    "postProcessors": [],
+                    "inheritPostProcessors": {},
+                    "inheritPreProcessors": {}
+                  }
+                },
+                {
+                  "name": "ลบใบสั่งซื้อ",
+                  "api": {
+                    "id": "30570911",
+                    "method": "delete",
+                    "path": "http://192.168.1.109:8000/api/purchases/1",
+                    "parameters": {
+                      "path": [],
+                      "query": [],
+                      "cookie": [],
+                      "header": []
+                    },
+                    "auth": {
+                      "type": "bearer",
+                      "bearer": {
+                        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhZGRwYXktZXF1aXBtZW50LXN5c3RlbSIsImF1ZCI6IndlYiIsInN1YiI6MSwiaWF0IjoxNzcyNjk1ODY1LCJleHAiOjE3NzI3ODIyNjUsIm5iZiI6MTc3MjY5NTg2NSwiZGF0YSI6eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBhZGRwYXkuY29tIiwicm9sZSI6IkFkbWluIn19.98vwhNqTP9_LgpziuOTk7nRJBrWZoSWxxidOYPdRFj8"
+                      }
+                    },
+                    "securityScheme": {},
+                    "commonParameters": {
+                      "query": [],
+                      "body": [],
+                      "cookie": [],
+                      "header": []
+                    },
+                    "responses": [
+                      {
+                        "id": "142258437",
+                        "code": 200,
+                        "name": "Success",
+                        "headers": [],
+                        "jsonSchema": {
+                          "type": "object",
+                          "properties": {},
+                          "x-apidog-orders": []
+                        },
+                        "itemSchema": {},
+                        "description": "",
+                        "contentType": "json",
+                        "mediaType": ""
+                      }
+                    ],
+                    "responseExamples": [],
+                    "requestBody": {
+                      "type": "application/json",
+                      "parameters": [],
+                      "jsonSchema": {
+                        "type": "object",
+                        "properties": {},
+                        "x-apidog-orders": []
+                      },
+                      "examples": [],
+                      "mediaType": "",
+                      "oasExtensions": "",
+                      "required": true,
+                      "additionalContentTypes": []
+                    },
+                    "description": "",
+                    "tags": [],
+                    "status": "developing",
+                    "serverId": "",
+                    "operationId": "",
+                    "sourceUrl": "",
+                    "ordering": 24,
+                    "cases": [],
+                    "mocks": [],
+                    "customApiFields": "{}",
+                    "advancedSettings": {
+                      "disabledSystemHeaders": {}
+                    },
+                    "mockScript": {},
+                    "codeSamples": [],
+                    "commonResponseStatus": {},
+                    "responseChildren": [],
+                    "visibility": "INHERITED",
+                    "moduleId": 1130419,
+                    "oasExtensions": "",
+                    "type": "http",
+                    "preProcessors": [],
+                    "postProcessors": [],
+                    "inheritPostProcessors": {},
+                    "inheritPreProcessors": {}
+                  }
+                }
+              ]
+            },
+            {
+              "name": "devices",
+              "id": 7204454,
+              "auth": {},
+              "securityScheme": {},
+              "parentId": 7204451,
+              "serverId": "",
+              "description": "",
+              "identityPattern": {
+                "httpApi": {
+                  "type": "inherit",
+                  "bodyType": "",
+                  "fields": []
+                }
+              },
+              "shareSettings": {},
+              "visibility": "INHERITED",
+              "moduleId": 1130419,
+              "preProcessors": [
+                {
+                  "id": "inheritProcessors",
+                  "type": "inheritProcessors",
+                  "data": {}
+                }
+              ],
+              "postProcessors": [
+                {
+                  "id": "inheritProcessors",
+                  "type": "inheritProcessors",
+                  "data": {}
+                }
+              ],
+              "inheritPostProcessors": {},
+              "inheritPreProcessors": {},
+              "items": [
+                {
+                  "name": "เพิ่มอุปกรณ์ย่อยใหม่",
+                  "api": {
+                    "id": "30570912",
+                    "method": "post",
+                    "path": "http://192.168.1.94:8000/api/devices",
+                    "parameters": {
+                      "path": [],
+                      "query": [],
+                      "cookie": [],
+                      "header": []
+                    },
+                    "auth": {
+                      "type": "bearer",
+                      "bearer": {
+                        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhZGRwYXktZXF1aXBtZW50LXN5c3RlbSIsImF1ZCI6IndlYiIsInN1YiI6MSwiaWF0IjoxNzczMTA3ODM2LCJleHAiOjE3NzMxOTQyMzYsIm5iZiI6MTc3MzEwNzgzNiwiZGF0YSI6eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBhZGRwYXkuY29tIiwicm9sZSI6IkFkbWluIn19.Wg0ePOBpKk16cJOjx0ILbzzyF9BcyaOj4CVEqH-GoVE"
+                      }
+                    },
+                    "securityScheme": {},
+                    "commonParameters": {
+                      "query": [],
+                      "body": [],
+                      "cookie": [],
+                      "header": []
+                    },
+                    "responses": [
+                      {
+                        "id": "112065150",
+                        "code": 200,
+                        "name": "Success",
+                        "headers": [],
+                        "jsonSchema": {
+                          "type": "object",
+                          "properties": {},
+                          "x-apidog-orders": []
+                        },
+                        "itemSchema": {},
+                        "description": "",
+                        "contentType": "json",
+                        "mediaType": ""
+                      }
+                    ],
+                    "responseExamples": [
+                      {
+                        "name": "Unprocessable Entity",
+                        "data": "{\"serial_number\":[\"The serial number field is required.\"],\"name\":[\"The name field is required.\"],\"category\":[\"The category field is required.\"],\"purchase_id\":[\"The purchase id field is required.\"]}",
+                        "responseId": "112065150",
+                        "description": "",
+                        "oasKey": "",
+                        "oasExtensions": ""
+                      }
+                    ],
+                    "requestBody": {
+                      "type": "application/json",
+                      "parameters": [],
+                      "jsonSchema": {
+                        "type": "object",
+                        "properties": {},
+                        "x-apidog-orders": []
+                      },
+                      "examples": [
+                        {
+                          "mediaType": "application/json",
+                          "value": "{\r\n  \"serial_number\": \"GPU-RTX3060-001\",\r\n  \"name\": \"NVIDIA RTX 3060 12GB\",\r\n  \"category\": \"Graphics Card\",\r\n  \"status\": \"In-stock\",\r\n  \"purchase_id\": 7,\r\n  \"parent_device_id\": null\r\n}"
+                        }
+                      ],
+                      "mediaType": "",
+                      "oasExtensions": "",
+                      "required": true,
+                      "additionalContentTypes": []
+                    },
+                    "description": "",
+                    "tags": [],
+                    "status": "developing",
+                    "serverId": "",
+                    "operationId": "",
+                    "sourceUrl": "",
+                    "ordering": 6,
+                    "cases": [],
+                    "mocks": [],
+                    "customApiFields": "{}",
+                    "advancedSettings": {
+                      "disabledSystemHeaders": {}
+                    },
+                    "mockScript": {},
+                    "codeSamples": [],
+                    "commonResponseStatus": {},
+                    "responseChildren": [],
+                    "visibility": "INHERITED",
+                    "moduleId": 1130419,
+                    "oasExtensions": "",
+                    "type": "http",
+                    "preProcessors": [],
+                    "postProcessors": [],
+                    "inheritPostProcessors": {},
+                    "inheritPreProcessors": {}
+                  }
+                },
+                {
+                  "name": "ดูรายชื่ออุปกรณ์",
+                  "api": {
+                    "id": "30570913",
+                    "method": "get",
+                    "path": "http://192.168.1.94:8000/api/devices/8",
+                    "parameters": {
+                      "query": [],
+                      "path": [],
+                      "cookie": [],
+                      "header": []
+                    },
+                    "auth": {
+                      "type": "bearer",
+                      "bearer": {
+                        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhZGRwYXktZXF1aXBtZW50LXN5c3RlbSIsImF1ZCI6IndlYiIsInN1YiI6MSwiaWF0IjoxNzczMjk5MjkwLCJleHAiOjE3NzMzODU2OTAsIm5iZiI6MTc3MzI5OTI5MCwiZGF0YSI6eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBhZGRwYXkuY29tIiwicm9sZSI6IkFkbWluIn19.z-B-3cUM-dY6uSj70j9BEha4B-5iKvRigTYZ8rJwW5k"
+                      }
+                    },
+                    "securityScheme": {},
+                    "commonParameters": {
+                      "query": [],
+                      "body": [],
+                      "cookie": [],
+                      "header": []
+                    },
+                    "responses": [
+                      {
+                        "id": "195627743",
+                        "code": 200,
+                        "name": "Success",
+                        "headers": [],
+                        "jsonSchema": {
+                          "type": "object",
+                          "properties": {},
+                          "x-apidog-orders": []
+                        },
+                        "itemSchema": {},
+                        "description": "",
+                        "contentType": "json",
+                        "mediaType": ""
+                      }
+                    ],
+                    "responseExamples": [
+                      {
+                        "name": "Not Found",
+                        "data": "{\"error\":\"Device not found\"}",
+                        "responseId": 195627743,
+                        "description": "",
+                        "oasKey": "",
+                        "oasExtensions": ""
+                      }
+                    ],
+                    "requestBody": {
+                      "type": "none",
+                      "parameters": [],
+                      "mediaType": "",
+                      "examples": [],
+                      "oasExtensions": ""
+                    },
+                    "description": "",
+                    "tags": [],
+                    "status": "developing",
+                    "serverId": "",
+                    "operationId": "",
+                    "sourceUrl": "",
+                    "ordering": 12,
+                    "cases": [],
+                    "mocks": [],
+                    "customApiFields": "{}",
+                    "advancedSettings": {
+                      "disabledSystemHeaders": {}
+                    },
+                    "mockScript": {},
+                    "codeSamples": [],
+                    "commonResponseStatus": {},
+                    "responseChildren": [],
+                    "visibility": "INHERITED",
+                    "moduleId": 1130419,
+                    "oasExtensions": "",
+                    "type": "http",
+                    "preProcessors": [],
+                    "postProcessors": [],
+                    "inheritPostProcessors": {},
+                    "inheritPreProcessors": {}
+                  }
+                },
+                {
+                  "name": "แก้ไขข้อมูลอุปกรณ์",
+                  "api": {
+                    "id": "30570914",
+                    "method": "put",
+                    "path": "http://192.168.1.94:8000/api/devices/4",
+                    "parameters": {
+                      "path": [],
+                      "query": [],
+                      "cookie": [],
+                      "header": []
+                    },
+                    "auth": {
+                      "type": "bearer",
+                      "bearer": {
+                        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhZGRwYXktZXF1aXBtZW50LXN5c3RlbSIsImF1ZCI6IndlYiIsInN1YiI6MSwiaWF0IjoxNzczMDQ0MTg1LCJleHAiOjE3NzMxMzA1ODUsIm5iZiI6MTc3MzA0NDE4NSwiZGF0YSI6eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBhZGRwYXkuY29tIiwicm9sZSI6IkFkbWluIn19.Y7wglodFZUGMzazfZFBZyGnRwV1kLwG_VqRBZZentW8"
+                      }
+                    },
+                    "securityScheme": {},
+                    "commonParameters": {
+                      "query": [],
+                      "body": [],
+                      "cookie": [],
+                      "header": []
+                    },
+                    "responses": [
+                      {
+                        "id": "142628830",
+                        "code": 200,
+                        "name": "Success",
+                        "headers": [],
+                        "jsonSchema": {
+                          "type": "object",
+                          "properties": {},
+                          "x-apidog-orders": []
+                        },
+                        "itemSchema": {},
+                        "description": "",
+                        "contentType": "json",
+                        "mediaType": ""
+                      }
+                    ],
+                    "responseExamples": [
+                      {
+                        "name": "OK",
+                        "data": "{\"id\":1,\"serial_number\":\"SN-I7-2026-X999\",\"name\":\"High-End Workstation Intel Core i7-14900K\",\"category\":\"Computer\",\"status\":\"In-stock\",\"purchase_id\":2,\"parent_device_id\":null,\"created_at\":\"2026-03-06T04:25:22.000000Z\",\"updated_at\":\"2026-03-06T04:29:37.000000Z\"}",
+                        "responseId": "142628830",
+                        "description": "",
+                        "oasKey": "",
+                        "oasExtensions": ""
+                      }
+                    ],
+                    "requestBody": {
+                      "type": "application/json",
+                      "parameters": [],
+                      "jsonSchema": {
+                        "type": "object",
+                        "properties": {},
+                        "x-apidog-orders": []
+                      },
+                      "examples": [
+                        {
+                          "mediaType": "application/json",
+                          "value": "{\r\n    \"id\": 4,\r\n    \"serial_number\": \"PC001\",\r\n    \"name\": \"Dell Inspiron 15\",\r\n    \"category\": \"Laptop\",\r\n    \"status\": \"In-stock\",\r\n    \"purchase_id\": 6,\r\n    \"parent_device_id\": null,\r\n    \"created_at\": \"2026-03-09T08:31:38.000000Z\",\r\n    \"updated_at\": \"2026-03-09T08:31:38.000000Z\",\r\n    \"purchase\": {\r\n        \"id\": 6,\r\n        \"po_number\": \"PO001\",\r\n        \"vendor_name\": \"ABC Electronics\",\r\n        \"purchase_date\": \"2026-03-09T00:00:00.000000Z\",\r\n        \"warranty_expire_date\": \"2027-03-09T00:00:00.000000Z\",\r\n        \"created_at\": \"2026-03-09T08:22:23.000000Z\",\r\n        \"updated_at\": \"2026-03-09T08:22:23.000000Z\",\r\n        \"sequence\": \"001\",\r\n        \"tax_id\": \"1234567890123\",\r\n        \"branch\": \"Head Office\",\r\n        \"item_value\": \"50000.00\",\r\n        \"vat_amount\": \"3500.00\",\r\n        \"total_amount\": \"53500.00\",\r\n        \"notes\": \"Purchase for laptop and accessories\"\r\n    },\r\n    \"parent_device\": null,\r\n    \"child_devices\": [\r\n        {\r\n            \"id\": 5,\r\n            \"serial_number\": \"RAM003\",\r\n            \"name\": \"8GB DDR4 RAM\",\r\n            \"category\": \"Memory\",\r\n            \"status\": \"In-stock\",\r\n            \"purchase_id\": 6,\r\n            \"parent_device_id\": 4,\r\n            \"created_at\": \"2026-03-09T08:33:51.000000Z\",\r\n            \"updated_at\": \"2026-03-09T08:33:51.000000Z\"\r\n        }\r\n    ],\r\n    \"repair_histories\": []\r\n}"
+                        }
+                      ],
+                      "mediaType": "",
+                      "oasExtensions": "",
+                      "required": true,
+                      "additionalContentTypes": []
+                    },
+                    "description": "",
+                    "tags": [],
+                    "status": "developing",
+                    "serverId": "",
+                    "operationId": "",
+                    "sourceUrl": "",
+                    "ordering": 18,
+                    "cases": [],
+                    "mocks": [],
+                    "customApiFields": "{}",
+                    "advancedSettings": {
+                      "disabledSystemHeaders": {}
+                    },
+                    "mockScript": {},
+                    "codeSamples": [],
+                    "commonResponseStatus": {},
+                    "responseChildren": [],
+                    "visibility": "INHERITED",
+                    "moduleId": 1130419,
+                    "oasExtensions": "",
+                    "type": "http",
+                    "preProcessors": [],
+                    "postProcessors": [],
+                    "inheritPostProcessors": {},
+                    "inheritPreProcessors": {}
+                  }
+                },
+                {
+                  "name": "ถอดอุปกรณ์ย่อยออก",
+                  "api": {
+                    "id": "30570915",
+                    "method": "post",
+                    "path": "http://192.168.1.94:8000/api/devices/detach/8",
+                    "parameters": {
+                      "query": [],
+                      "path": [],
+                      "cookie": [],
+                      "header": []
+                    },
+                    "auth": {
+                      "type": "bearer",
+                      "bearer": {
+                        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhZGRwYXktZXF1aXBtZW50LXN5c3RlbSIsImF1ZCI6IndlYiIsInN1YiI6MSwiaWF0IjoxNzczMjk5MjkwLCJleHAiOjE3NzMzODU2OTAsIm5iZiI6MTc3MzI5OTI5MCwiZGF0YSI6eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBhZGRwYXkuY29tIiwicm9sZSI6IkFkbWluIn19.z-B-3cUM-dY6uSj70j9BEha4B-5iKvRigTYZ8rJwW5k"
+                      }
+                    },
+                    "securityScheme": {},
+                    "commonParameters": {
+                      "query": [],
+                      "body": [],
+                      "cookie": [],
+                      "header": []
+                    },
+                    "responses": [
+                      {
+                        "id": "160461378",
+                        "code": 200,
+                        "name": "Success",
+                        "headers": [],
+                        "jsonSchema": {
+                          "type": "object",
+                          "properties": {},
+                          "x-apidog-orders": []
+                        },
+                        "itemSchema": {},
+                        "description": "",
+                        "contentType": "json",
+                        "mediaType": ""
+                      }
+                    ],
+                    "responseExamples": [
+                      {
+                        "name": "OK",
+                        "data": "{\"id\":9,\"serial_number\":\"RAM-16GB-001\",\"name\":\"Corsair Vengeance LPX 16GB DDR4 3200MHz\",\"category\":\"RAM\",\"status\":\"In-stock\",\"purchase_id\":7,\"parent_device_id\":1,\"created_at\":\"2026-03-10T03:01:01.000000Z\",\"updated_at\":\"2026-03-10T03:27:56.000000Z\",\"purchase\":{\"id\":7,\"po_number\":\"PO-2026-001\",\"vendor_name\":\"Dell Thailand Co., Ltd.\",\"purchase_date\":\"2026-03-01T00:00:00.000000Z\",\"warranty_expire_date\":\"2029-03-01T00:00:00.000000Z\",\"created_at\":\"2026-03-10T02:34:54.000000Z\",\"updated_at\":\"2026-03-10T02:34:54.000000Z\",\"sequence\":\"001\",\"tax_id\":\"0101234567890\",\"branch\":\"\\u0e2a\\u0e33\\u0e19\\u0e31\\u0e01\\u0e07\\u0e32\\u0e19\\u0e43\\u0e2b\\u0e0d\\u0e48\",\"item_value\":\"150000.00\",\"vat_amount\":\"10500.00\",\"total_amount\":\"160500.00\",\"notes\":\"\\u0e2a\\u0e31\\u0e48\\u0e07\\u0e0b\\u0e37\\u0e49\\u0e2d\\u0e2d\\u0e38\\u0e1b\\u0e01\\u0e23\\u0e13\\u0e4c\\u0e04\\u0e2d\\u0e21\\u0e1e\\u0e34\\u0e27\\u0e40\\u0e15\\u0e2d\\u0e23\\u0e4c\\u0e2a\\u0e33\\u0e2b\\u0e23\\u0e31\\u0e1a\\u0e41\\u0e1c\\u0e19\\u0e01 IT\"},\"parent_device\":{\"id\":1,\"serial_number\":\"PC-CASE-001\",\"name\":\"Fractal Design Define 7 Compact\",\"category\":\"Desktop\",\"status\":\"In-stock\",\"purchase_id\":7,\"created_at\":\"2026-03-10T03:13:13.000000Z\",\"updated_at\":\"2026-03-10T03:13:13.000000Z\"},\"repair_histories\":[]}",
+                        "responseId": 160461378,
+                        "description": "",
+                        "oasKey": "",
+                        "oasExtensions": ""
+                      }
+                    ],
+                    "requestBody": {
+                      "type": "none",
+                      "parameters": [],
+                      "mediaType": "",
+                      "examples": [],
+                      "oasExtensions": ""
+                    },
+                    "description": "",
+                    "tags": [],
+                    "status": "developing",
+                    "serverId": "",
+                    "operationId": "",
+                    "sourceUrl": "",
+                    "ordering": 24,
+                    "cases": [],
+                    "mocks": [],
+                    "customApiFields": "{}",
+                    "advancedSettings": {
+                      "disabledSystemHeaders": {}
+                    },
+                    "mockScript": {},
+                    "codeSamples": [],
+                    "commonResponseStatus": {},
+                    "responseChildren": [],
+                    "visibility": "INHERITED",
+                    "moduleId": 1130419,
+                    "oasExtensions": "",
+                    "type": "http",
+                    "preProcessors": [],
+                    "postProcessors": [],
+                    "inheritPostProcessors": {},
+                    "inheritPreProcessors": {}
+                  }
+                },
+                {
+                  "name": "ลบอุปกรณ์",
+                  "api": {
+                    "id": "30570916",
+                    "method": "delete",
+                    "path": "http://192.168.85.139:8000/api/devices/1",
+                    "parameters": {
+                      "path": [],
+                      "query": [],
+                      "cookie": [],
+                      "header": []
+                    },
+                    "auth": {
+                      "type": "bearer",
+                      "bearer": {
+                        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhZGRwYXktZXF1aXBtZW50LXN5c3RlbSIsImF1ZCI6IndlYiIsInN1YiI6MSwiaWF0IjoxNzcyNzY4ODY5LCJleHAiOjE3NzI4NTUyNjksIm5iZiI6MTc3Mjc2ODg2OSwiZGF0YSI6eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBhZGRwYXkuY29tIiwicm9sZSI6IkFkbWluIn19.OUPO7xIo1K2i-VRP3XOQIBNaeVgt_GGoTxBzPJf5L2Q"
+                      }
+                    },
+                    "securityScheme": {},
+                    "commonParameters": {
+                      "query": [],
+                      "body": [],
+                      "cookie": [],
+                      "header": []
+                    },
+                    "responses": [
+                      {
+                        "id": "137827618",
+                        "code": 200,
+                        "name": "Success",
+                        "headers": [],
+                        "jsonSchema": {
+                          "type": "object",
+                          "properties": {},
+                          "x-apidog-orders": []
+                        },
+                        "itemSchema": {},
+                        "description": "",
+                        "contentType": "json",
+                        "mediaType": ""
+                      }
+                    ],
+                    "responseExamples": [
+                      {
+                        "name": "OK",
+                        "data": "{\"message\":\"Device deleted successfully\"}",
+                        "responseId": "137827618",
+                        "description": "",
+                        "oasKey": "",
+                        "oasExtensions": ""
+                      }
+                    ],
+                    "requestBody": {
+                      "type": "none",
+                      "parameters": [],
+                      "examples": [],
+                      "mediaType": "",
+                      "oasExtensions": "",
+                      "required": true,
+                      "additionalContentTypes": []
+                    },
+                    "description": "",
+                    "tags": [],
+                    "status": "developing",
+                    "serverId": "",
+                    "operationId": "",
+                    "sourceUrl": "",
+                    "ordering": 30,
+                    "cases": [],
+                    "mocks": [],
+                    "customApiFields": "{}",
+                    "advancedSettings": {
+                      "disabledSystemHeaders": {}
+                    },
+                    "mockScript": {},
+                    "codeSamples": [],
+                    "commonResponseStatus": {},
+                    "responseChildren": [],
+                    "visibility": "INHERITED",
+                    "moduleId": 1130419,
+                    "oasExtensions": "",
+                    "type": "http",
+                    "preProcessors": [],
+                    "postProcessors": [],
+                    "inheritPostProcessors": {},
+                    "inheritPreProcessors": {}
+                  }
+                },
+                {
+                  "name": "เพิ่มอุปกรณ์หลัก",
+                  "api": {
+                    "id": "30570917",
+                    "method": "post",
+                    "path": "http://192.168.1.94:8000/api/devices/parents",
+                    "parameters": {
+                      "path": [],
+                      "query": [],
+                      "cookie": [],
+                      "header": []
+                    },
+                    "auth": {
+                      "type": "bearer",
+                      "bearer": {
+                        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhZGRwYXktZXF1aXBtZW50LXN5c3RlbSIsImF1ZCI6IndlYiIsInN1YiI6MSwiaWF0IjoxNzczMTA3ODM2LCJleHAiOjE3NzMxOTQyMzYsIm5iZiI6MTc3MzEwNzgzNiwiZGF0YSI6eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBhZGRwYXkuY29tIiwicm9sZSI6IkFkbWluIn19.Wg0ePOBpKk16cJOjx0ILbzzyF9BcyaOj4CVEqH-GoVE"
+                      }
+                    },
+                    "securityScheme": {},
+                    "commonParameters": {
+                      "query": [],
+                      "body": [],
+                      "cookie": [],
+                      "header": []
+                    },
+                    "responses": [
+                      {
+                        "id": "116631624",
+                        "code": 200,
+                        "name": "Success",
+                        "headers": [],
+                        "jsonSchema": {
+                          "type": "object",
+                          "properties": {},
+                          "x-apidog-orders": []
+                        },
+                        "itemSchema": {},
+                        "description": "",
+                        "contentType": "json",
+                        "mediaType": ""
+                      }
+                    ],
+                    "responseExamples": [],
+                    "requestBody": {
+                      "type": "application/json",
+                      "parameters": [],
+                      "jsonSchema": {
+                        "type": "object",
+                        "properties": {},
+                        "x-apidog-orders": []
+                      },
+                      "examples": [
+                        {
+                          "mediaType": "application/json",
+                          "value": "// Desktop PC\r\n{\r\n  \"serial_number\": \"DELL-PC-001\",\r\n  \"name\": \"Dell OptiPlex 7090\",\r\n  \"category\": \"Desktop\",\r\n  \"status\": \"In-stock\",\r\n  \"purchase_id\": 7\r\n}"
+                        }
+                      ],
+                      "mediaType": "",
+                      "oasExtensions": "",
+                      "required": true,
+                      "additionalContentTypes": []
+                    },
+                    "description": "",
+                    "tags": [],
+                    "status": "developing",
+                    "serverId": "",
+                    "operationId": "",
+                    "sourceUrl": "",
+                    "ordering": 36,
+                    "cases": [],
+                    "mocks": [],
+                    "customApiFields": "{}",
+                    "advancedSettings": {
+                      "disabledSystemHeaders": {}
+                    },
+                    "mockScript": {},
+                    "codeSamples": [],
+                    "commonResponseStatus": {},
+                    "responseChildren": [],
+                    "visibility": "INHERITED",
+                    "moduleId": 1130419,
+                    "oasExtensions": "",
+                    "type": "http",
+                    "preProcessors": [],
+                    "postProcessors": [],
+                    "inheritPostProcessors": {},
+                    "inheritPreProcessors": {}
+                  }
+                },
+                {
+                  "name": "เพิ่มอุปกรณ์เข้าไปในเคสคอม",
+                  "api": {
+                    "id": "30570918",
+                    "method": "post",
+                    "path": "http://192.168.1.94:8000/api/devices/1/attach/11",
+                    "parameters": {
+                      "path": [],
+                      "query": [],
+                      "cookie": [],
+                      "header": []
+                    },
+                    "auth": {
+                      "type": "bearer",
+                      "bearer": {
+                        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhZGRwYXktZXF1aXBtZW50LXN5c3RlbSIsImF1ZCI6IndlYiIsInN1YiI6MSwiaWF0IjoxNzczMTA3ODM2LCJleHAiOjE3NzMxOTQyMzYsIm5iZiI6MTc3MzEwNzgzNiwiZGF0YSI6eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBhZGRwYXkuY29tIiwicm9sZSI6IkFkbWluIn19.Wg0ePOBpKk16cJOjx0ILbzzyF9BcyaOj4CVEqH-GoVE"
+                      }
+                    },
+                    "securityScheme": {},
+                    "commonParameters": {
+                      "query": [],
+                      "body": [],
+                      "cookie": [],
+                      "header": []
+                    },
+                    "responses": [
+                      {
+                        "id": "148766245",
+                        "code": 200,
+                        "name": "Success",
+                        "headers": [],
+                        "jsonSchema": {
+                          "type": "object",
+                          "properties": {},
+                          "x-apidog-orders": []
+                        },
+                        "itemSchema": {},
+                        "description": "",
+                        "contentType": "json",
+                        "mediaType": ""
+                      }
+                    ],
+                    "responseExamples": [
+                      {
+                        "name": "OK",
+                        "data": "{\"message\":\"Device NVIDIA RTX 3060 12GB attached to Fractal Design Define 7 Compact\",\"child\":{\"id\":11,\"serial_number\":\"GPU-RTX3060-001\",\"name\":\"NVIDIA RTX 3060 12GB\",\"category\":\"Graphics Card\",\"status\":\"In-stock\",\"purchase_id\":7,\"parent_device_id\":\"1\",\"created_at\":\"2026-03-10T03:01:45.000000Z\",\"updated_at\":\"2026-03-10T03:28:18.000000Z\"},\"parent\":{\"id\":1,\"serial_number\":\"PC-CASE-001\",\"name\":\"Fractal Design Define 7 Compact\",\"category\":\"Desktop\",\"status\":\"In-stock\",\"purchase_id\":7,\"created_at\":\"2026-03-10T03:13:13.000000Z\",\"updated_at\":\"2026-03-10T03:13:13.000000Z\"}}",
+                        "responseId": "148766245",
+                        "description": "",
+                        "oasKey": "",
+                        "oasExtensions": ""
+                      }
+                    ],
+                    "requestBody": {
+                      "type": "none",
+                      "parameters": [],
+                      "examples": [],
+                      "mediaType": "",
+                      "oasExtensions": "",
+                      "required": true,
+                      "additionalContentTypes": []
+                    },
+                    "description": "",
+                    "tags": [],
+                    "status": "developing",
+                    "serverId": "",
+                    "operationId": "",
+                    "sourceUrl": "",
+                    "ordering": 42,
+                    "cases": [],
+                    "mocks": [],
+                    "customApiFields": "{}",
+                    "advancedSettings": {
+                      "disabledSystemHeaders": {}
+                    },
+                    "mockScript": {},
+                    "codeSamples": [],
+                    "commonResponseStatus": {},
+                    "responseChildren": [],
+                    "visibility": "INHERITED",
+                    "moduleId": 1130419,
+                    "oasExtensions": "",
+                    "type": "http",
+                    "preProcessors": [],
+                    "postProcessors": [],
+                    "inheritPostProcessors": {},
+                    "inheritPreProcessors": {}
+                  }
+                }
+              ]
+            },
+            {
+              "name": "get",
+              "id": 7204455,
+              "auth": {},
+              "securityScheme": {},
+              "parentId": 7204451,
+              "serverId": "",
+              "description": "",
+              "identityPattern": {
+                "httpApi": {
+                  "type": "inherit",
+                  "bodyType": "",
+                  "fields": []
+                }
+              },
+              "shareSettings": {},
+              "visibility": "INHERITED",
+              "moduleId": 1130419,
+              "preProcessors": [
+                {
+                  "id": "inheritProcessors",
+                  "type": "inheritProcessors",
+                  "data": {}
+                }
+              ],
+              "postProcessors": [
+                {
+                  "id": "inheritProcessors",
+                  "type": "inheritProcessors",
+                  "data": {}
+                }
+              ],
+              "inheritPostProcessors": {},
+              "inheritPreProcessors": {},
+              "items": [
+                {
+                  "name": "ดูรายละเอียดอุปกรณ์หลัก",
+                  "api": {
+                    "id": "30570919",
+                    "method": "get",
+                    "path": "http://192.168.1.94:8000/api/devices/1/components",
+                    "parameters": {
+                      "path": [],
+                      "query": [],
+                      "cookie": [],
+                      "header": []
+                    },
+                    "auth": {
+                      "type": "bearer",
+                      "bearer": {
+                        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhZGRwYXktZXF1aXBtZW50LXN5c3RlbSIsImF1ZCI6IndlYiIsInN1YiI6MSwiaWF0IjoxNzczMTA3ODM2LCJleHAiOjE3NzMxOTQyMzYsIm5iZiI6MTc3MzEwNzgzNiwiZGF0YSI6eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBhZGRwYXkuY29tIiwicm9sZSI6IkFkbWluIn19.Wg0ePOBpKk16cJOjx0ILbzzyF9BcyaOj4CVEqH-GoVE"
+                      }
+                    },
+                    "securityScheme": {},
+                    "commonParameters": {
+                      "query": [],
+                      "body": [],
+                      "cookie": [],
+                      "header": []
+                    },
+                    "responses": [
+                      {
+                        "id": "105444590",
+                        "code": 200,
+                        "name": "Success",
+                        "headers": [],
+                        "jsonSchema": {
+                          "type": "object",
+                          "properties": {},
+                          "x-apidog-orders": []
+                        },
+                        "itemSchema": {},
+                        "description": "",
+                        "contentType": "json",
+                        "mediaType": ""
+                      }
+                    ],
+                    "responseExamples": [
+                      {
+                        "name": "OK",
+                        "data": "[{\"id\":8,\"serial_number\":\"RAM-8GB-001\",\"name\":\"Kingston DDR4 8GB 3200MHz\",\"category\":\"RAM\",\"status\":\"In-stock\",\"purchase_id\":7,\"parent_device_id\":1,\"created_at\":\"2026-03-10T02:39:15.000000Z\",\"updated_at\":\"2026-03-10T03:28:03.000000Z\"},{\"id\":9,\"serial_number\":\"RAM-16GB-001\",\"name\":\"Corsair Vengeance LPX 16GB DDR4 3200MHz\",\"category\":\"RAM\",\"status\":\"In-stock\",\"purchase_id\":7,\"parent_device_id\":1,\"created_at\":\"2026-03-10T03:01:01.000000Z\",\"updated_at\":\"2026-03-10T03:27:56.000000Z\"},{\"id\":10,\"serial_number\":\"CPU-I5-001\",\"name\":\"Intel Core i5-12400F\",\"category\":\"CPU\",\"status\":\"In-stock\",\"purchase_id\":7,\"parent_device_id\":1,\"created_at\":\"2026-03-10T03:01:23.000000Z\",\"updated_at\":\"2026-03-10T03:28:09.000000Z\"},{\"id\":11,\"serial_number\":\"GPU-RTX3060-001\",\"name\":\"NVIDIA RTX 3060 12GB\",\"category\":\"Graphics Card\",\"status\":\"In-stock\",\"purchase_id\":7,\"parent_device_id\":1,\"created_at\":\"2026-03-10T03:01:45.000000Z\",\"updated_at\":\"2026-03-10T03:28:18.000000Z\"}]",
+                        "responseId": "105444590",
+                        "description": "",
+                        "oasKey": "",
+                        "oasExtensions": ""
+                      }
+                    ],
+                    "requestBody": {
+                      "type": "none",
+                      "parameters": [],
+                      "examples": [],
+                      "mediaType": "",
+                      "oasExtensions": "",
+                      "required": true,
+                      "additionalContentTypes": []
+                    },
+                    "description": "",
+                    "tags": [],
+                    "status": "developing",
+                    "serverId": "",
+                    "operationId": "",
+                    "sourceUrl": "",
+                    "ordering": 6,
+                    "cases": [],
+                    "mocks": [],
+                    "customApiFields": "{}",
+                    "advancedSettings": {
+                      "disabledSystemHeaders": {}
+                    },
+                    "mockScript": {},
+                    "codeSamples": [],
+                    "commonResponseStatus": {},
+                    "responseChildren": [],
+                    "visibility": "INHERITED",
+                    "moduleId": 1130419,
+                    "oasExtensions": "",
+                    "type": "http",
+                    "preProcessors": [],
+                    "postProcessors": [],
+                    "inheritPostProcessors": {},
+                    "inheritPreProcessors": {}
+                  }
+                },
+                {
+                  "name": "ดูอุปกรณ์ย่อยแต่ละตัว",
+                  "api": {
+                    "id": "30570920",
+                    "method": "get",
+                    "path": "http://192.168.1.94:8000/api/devices/9",
+                    "parameters": {
+                      "path": [],
+                      "query": [],
+                      "cookie": [],
+                      "header": []
+                    },
+                    "auth": {
+                      "type": "bearer",
+                      "bearer": {
+                        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhZGRwYXktZXF1aXBtZW50LXN5c3RlbSIsImF1ZCI6IndlYiIsInN1YiI6MSwiaWF0IjoxNzczMTA3ODM2LCJleHAiOjE3NzMxOTQyMzYsIm5iZiI6MTc3MzEwNzgzNiwiZGF0YSI6eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBhZGRwYXkuY29tIiwicm9sZSI6IkFkbWluIn19.Wg0ePOBpKk16cJOjx0ILbzzyF9BcyaOj4CVEqH-GoVE"
+                      }
+                    },
+                    "securityScheme": {},
+                    "commonParameters": {
+                      "query": [],
+                      "body": [],
+                      "cookie": [],
+                      "header": []
+                    },
+                    "responses": [
+                      {
+                        "id": "141038359",
+                        "code": 200,
+                        "name": "Success",
+                        "headers": [],
+                        "jsonSchema": {
+                          "type": "object",
+                          "properties": {},
+                          "x-apidog-orders": []
+                        },
+                        "itemSchema": {},
+                        "description": "",
+                        "contentType": "json",
+                        "mediaType": ""
+                      }
+                    ],
+                    "responseExamples": [
+                      {
+                        "name": "OK",
+                        "data": "{\"id\":9,\"serial_number\":\"RAM-16GB-001\",\"name\":\"Corsair Vengeance LPX 16GB DDR4 3200MHz\",\"category\":\"RAM\",\"status\":\"In-stock\",\"purchase_id\":7,\"parent_device_id\":1,\"created_at\":\"2026-03-10T03:01:01.000000Z\",\"updated_at\":\"2026-03-10T03:27:56.000000Z\",\"purchase\":{\"id\":7,\"po_number\":\"PO-2026-001\",\"vendor_name\":\"Dell Thailand Co., Ltd.\",\"purchase_date\":\"2026-03-01T00:00:00.000000Z\",\"warranty_expire_date\":\"2029-03-01T00:00:00.000000Z\",\"created_at\":\"2026-03-10T02:34:54.000000Z\",\"updated_at\":\"2026-03-10T02:34:54.000000Z\",\"sequence\":\"001\",\"tax_id\":\"0101234567890\",\"branch\":\"\\u0e2a\\u0e33\\u0e19\\u0e31\\u0e01\\u0e07\\u0e32\\u0e19\\u0e43\\u0e2b\\u0e0d\\u0e48\",\"item_value\":\"150000.00\",\"vat_amount\":\"10500.00\",\"total_amount\":\"160500.00\",\"notes\":\"\\u0e2a\\u0e31\\u0e48\\u0e07\\u0e0b\\u0e37\\u0e49\\u0e2d\\u0e2d\\u0e38\\u0e1b\\u0e01\\u0e23\\u0e13\\u0e4c\\u0e04\\u0e2d\\u0e21\\u0e1e\\u0e34\\u0e27\\u0e40\\u0e15\\u0e2d\\u0e23\\u0e4c\\u0e2a\\u0e33\\u0e2b\\u0e23\\u0e31\\u0e1a\\u0e41\\u0e1c\\u0e19\\u0e01 IT\"},\"parent_device\":{\"id\":1,\"serial_number\":\"PC-CASE-001\",\"name\":\"Fractal Design Define 7 Compact\",\"category\":\"Desktop\",\"status\":\"In-stock\",\"purchase_id\":7,\"created_at\":\"2026-03-10T03:13:13.000000Z\",\"updated_at\":\"2026-03-10T03:13:13.000000Z\"},\"repair_histories\":[]}",
+                        "responseId": "141038359",
+                        "description": "",
+                        "oasKey": "",
+                        "oasExtensions": ""
+                      }
+                    ],
+                    "requestBody": {
+                      "type": "none",
+                      "parameters": [],
+                      "examples": [],
+                      "mediaType": "",
+                      "oasExtensions": "",
+                      "required": true,
+                      "additionalContentTypes": []
+                    },
+                    "description": "",
+                    "tags": [],
+                    "status": "developing",
+                    "serverId": "",
+                    "operationId": "",
+                    "sourceUrl": "",
+                    "ordering": 12,
+                    "cases": [],
+                    "mocks": [],
+                    "customApiFields": "{}",
+                    "advancedSettings": {
+                      "disabledSystemHeaders": {}
+                    },
+                    "mockScript": {},
+                    "codeSamples": [],
+                    "commonResponseStatus": {},
+                    "responseChildren": [],
+                    "visibility": "INHERITED",
+                    "moduleId": 1130419,
+                    "oasExtensions": "",
+                    "type": "http",
+                    "preProcessors": [],
+                    "postProcessors": [],
+                    "inheritPostProcessors": {},
+                    "inheritPreProcessors": {}
+                  }
+                },
+                {
+                  "name": "ดูอุปกรณ์ย่อยทั้งหมด",
+                  "api": {
+                    "id": "30570921",
+                    "method": "get",
+                    "path": "http://192.168.1.94:8000/api/devices",
+                    "parameters": {
+                      "path": [],
+                      "query": [],
+                      "cookie": [],
+                      "header": []
+                    },
+                    "auth": {
+                      "type": "bearer",
+                      "bearer": {
+                        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhZGRwYXktZXF1aXBtZW50LXN5c3RlbSIsImF1ZCI6IndlYiIsInN1YiI6MSwiaWF0IjoxNzczMTA3ODM2LCJleHAiOjE3NzMxOTQyMzYsIm5iZiI6MTc3MzEwNzgzNiwiZGF0YSI6eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBhZGRwYXkuY29tIiwicm9sZSI6IkFkbWluIn19.Wg0ePOBpKk16cJOjx0ILbzzyF9BcyaOj4CVEqH-GoVE"
+                      }
+                    },
+                    "securityScheme": {},
+                    "commonParameters": {
+                      "query": [],
+                      "body": [],
+                      "cookie": [],
+                      "header": []
+                    },
+                    "responses": [
+                      {
+                        "id": "115767077",
+                        "code": 200,
+                        "name": "Success",
+                        "headers": [],
+                        "jsonSchema": {
+                          "type": "object",
+                          "properties": {},
+                          "x-apidog-orders": []
+                        },
+                        "itemSchema": {},
+                        "description": "",
+                        "contentType": "json",
+                        "mediaType": ""
+                      }
+                    ],
+                    "responseExamples": [
+                      {
+                        "name": "OK",
+                        "data": "{\"id\":9,\"serial_number\":\"RAM-16GB-001\",\"name\":\"Corsair Vengeance LPX 16GB DDR4 3200MHz\",\"category\":\"RAM\",\"status\":\"In-stock\",\"purchase_id\":7,\"parent_device_id\":1,\"created_at\":\"2026-03-10T03:01:01.000000Z\",\"updated_at\":\"2026-03-10T03:27:56.000000Z\",\"purchase\":{\"id\":7,\"po_number\":\"PO-2026-001\",\"vendor_name\":\"Dell Thailand Co., Ltd.\",\"purchase_date\":\"2026-03-01T00:00:00.000000Z\",\"warranty_expire_date\":\"2029-03-01T00:00:00.000000Z\",\"created_at\":\"2026-03-10T02:34:54.000000Z\",\"updated_at\":\"2026-03-10T02:34:54.000000Z\",\"sequence\":\"001\",\"tax_id\":\"0101234567890\",\"branch\":\"\\u0e2a\\u0e33\\u0e19\\u0e31\\u0e01\\u0e07\\u0e32\\u0e19\\u0e43\\u0e2b\\u0e0d\\u0e48\",\"item_value\":\"150000.00\",\"vat_amount\":\"10500.00\",\"total_amount\":\"160500.00\",\"notes\":\"\\u0e2a\\u0e31\\u0e48\\u0e07\\u0e0b\\u0e37\\u0e49\\u0e2d\\u0e2d\\u0e38\\u0e1b\\u0e01\\u0e23\\u0e13\\u0e4c\\u0e04\\u0e2d\\u0e21\\u0e1e\\u0e34\\u0e27\\u0e40\\u0e15\\u0e2d\\u0e23\\u0e4c\\u0e2a\\u0e33\\u0e2b\\u0e23\\u0e31\\u0e1a\\u0e41\\u0e1c\\u0e19\\u0e01 IT\"},\"parent_device\":{\"id\":1,\"serial_number\":\"PC-CASE-001\",\"name\":\"Fractal Design Define 7 Compact\",\"category\":\"Desktop\",\"status\":\"In-stock\",\"purchase_id\":7,\"created_at\":\"2026-03-10T03:13:13.000000Z\",\"updated_at\":\"2026-03-10T03:13:13.000000Z\"},\"repair_histories\":[]}",
+                        "responseId": "115767077",
+                        "description": "",
+                        "oasKey": "",
+                        "oasExtensions": ""
+                      }
+                    ],
+                    "requestBody": {
+                      "type": "none",
+                      "parameters": [],
+                      "examples": [],
+                      "mediaType": "",
+                      "oasExtensions": "",
+                      "required": true,
+                      "additionalContentTypes": []
+                    },
+                    "description": "",
+                    "tags": [],
+                    "status": "developing",
+                    "serverId": "",
+                    "operationId": "",
+                    "sourceUrl": "",
+                    "ordering": 18,
+                    "cases": [],
+                    "mocks": [],
+                    "customApiFields": "{}",
+                    "advancedSettings": {
+                      "disabledSystemHeaders": {}
+                    },
+                    "mockScript": {},
+                    "codeSamples": [],
+                    "commonResponseStatus": {},
+                    "responseChildren": [],
+                    "visibility": "INHERITED",
+                    "moduleId": 1130419,
+                    "oasExtensions": "",
+                    "type": "http",
+                    "preProcessors": [],
+                    "postProcessors": [],
+                    "inheritPostProcessors": {},
+                    "inheritPreProcessors": {}
+                  }
+                },
+                {
+                  "name": "ดูรายการอุปกรณ์หลักทั้งหมด",
+                  "api": {
+                    "id": "30570922",
+                    "method": "get",
+                    "path": "http://192.168.1.94:8000/api/devices/parents",
+                    "parameters": {
+                      "path": [],
+                      "query": [],
+                      "cookie": [],
+                      "header": []
+                    },
+                    "auth": {
+                      "type": "bearer",
+                      "bearer": {
+                        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhZGRwYXktZXF1aXBtZW50LXN5c3RlbSIsImF1ZCI6IndlYiIsInN1YiI6MSwiaWF0IjoxNzczMTA3ODM2LCJleHAiOjE3NzMxOTQyMzYsIm5iZiI6MTc3MzEwNzgzNiwiZGF0YSI6eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBhZGRwYXkuY29tIiwicm9sZSI6IkFkbWluIn19.Wg0ePOBpKk16cJOjx0ILbzzyF9BcyaOj4CVEqH-GoVE"
+                      }
+                    },
+                    "securityScheme": {},
+                    "commonParameters": {
+                      "query": [],
+                      "body": [],
+                      "cookie": [],
+                      "header": []
+                    },
+                    "responses": [
+                      {
+                        "id": "181506914",
+                        "code": 200,
+                        "name": "Success",
+                        "headers": [],
+                        "jsonSchema": {
+                          "type": "object",
+                          "properties": {},
+                          "x-apidog-orders": []
+                        },
+                        "itemSchema": {},
+                        "description": "",
+                        "contentType": "json",
+                        "mediaType": ""
+                      }
+                    ],
+                    "responseExamples": [
+                      {
+                        "name": "OK",
+                        "data": "{\"id\":9,\"serial_number\":\"RAM-16GB-001\",\"name\":\"Corsair Vengeance LPX 16GB DDR4 3200MHz\",\"category\":\"RAM\",\"status\":\"In-stock\",\"purchase_id\":7,\"parent_device_id\":1,\"created_at\":\"2026-03-10T03:01:01.000000Z\",\"updated_at\":\"2026-03-10T03:27:56.000000Z\",\"purchase\":{\"id\":7,\"po_number\":\"PO-2026-001\",\"vendor_name\":\"Dell Thailand Co., Ltd.\",\"purchase_date\":\"2026-03-01T00:00:00.000000Z\",\"warranty_expire_date\":\"2029-03-01T00:00:00.000000Z\",\"created_at\":\"2026-03-10T02:34:54.000000Z\",\"updated_at\":\"2026-03-10T02:34:54.000000Z\",\"sequence\":\"001\",\"tax_id\":\"0101234567890\",\"branch\":\"\\u0e2a\\u0e33\\u0e19\\u0e31\\u0e01\\u0e07\\u0e32\\u0e19\\u0e43\\u0e2b\\u0e0d\\u0e48\",\"item_value\":\"150000.00\",\"vat_amount\":\"10500.00\",\"total_amount\":\"160500.00\",\"notes\":\"\\u0e2a\\u0e31\\u0e48\\u0e07\\u0e0b\\u0e37\\u0e49\\u0e2d\\u0e2d\\u0e38\\u0e1b\\u0e01\\u0e23\\u0e13\\u0e4c\\u0e04\\u0e2d\\u0e21\\u0e1e\\u0e34\\u0e27\\u0e40\\u0e15\\u0e2d\\u0e23\\u0e4c\\u0e2a\\u0e33\\u0e2b\\u0e23\\u0e31\\u0e1a\\u0e41\\u0e1c\\u0e19\\u0e01 IT\"},\"parent_device\":{\"id\":1,\"serial_number\":\"PC-CASE-001\",\"name\":\"Fractal Design Define 7 Compact\",\"category\":\"Desktop\",\"status\":\"In-stock\",\"purchase_id\":7,\"created_at\":\"2026-03-10T03:13:13.000000Z\",\"updated_at\":\"2026-03-10T03:13:13.000000Z\"},\"repair_histories\":[]}",
+                        "responseId": "181506914",
+                        "description": "",
+                        "oasKey": "",
+                        "oasExtensions": ""
+                      }
+                    ],
+                    "requestBody": {
+                      "type": "none",
+                      "parameters": [],
+                      "examples": [],
+                      "mediaType": "",
+                      "oasExtensions": "",
+                      "required": true,
+                      "additionalContentTypes": []
+                    },
+                    "description": "",
+                    "tags": [],
+                    "status": "developing",
+                    "serverId": "",
+                    "operationId": "",
+                    "sourceUrl": "",
+                    "ordering": 24,
+                    "cases": [],
+                    "mocks": [],
+                    "customApiFields": "{}",
+                    "advancedSettings": {
+                      "disabledSystemHeaders": {}
+                    },
+                    "mockScript": {},
+                    "codeSamples": [],
+                    "commonResponseStatus": {},
+                    "responseChildren": [],
+                    "visibility": "INHERITED",
+                    "moduleId": 1130419,
+                    "oasExtensions": "",
+                    "type": "http",
+                    "preProcessors": [],
+                    "postProcessors": [],
+                    "inheritPostProcessors": {},
+                    "inheritPreProcessors": {}
+                  }
+                },
+                {
+                  "name": "ดูรายการอุปกรณ์หลักแต่ละตัว",
+                  "api": {
+                    "id": "30570923",
+                    "method": "get",
+                    "path": "http://192.168.1.94:8000/api/devices/parents/2",
+                    "parameters": {
+                      "path": [],
+                      "query": [],
+                      "cookie": [],
+                      "header": []
+                    },
+                    "auth": {
+                      "type": "bearer",
+                      "bearer": {
+                        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhZGRwYXktZXF1aXBtZW50LXN5c3RlbSIsImF1ZCI6IndlYiIsInN1YiI6MSwiaWF0IjoxNzczMTA3ODM2LCJleHAiOjE3NzMxOTQyMzYsIm5iZiI6MTc3MzEwNzgzNiwiZGF0YSI6eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBhZGRwYXkuY29tIiwicm9sZSI6IkFkbWluIn19.Wg0ePOBpKk16cJOjx0ILbzzyF9BcyaOj4CVEqH-GoVE"
+                      }
+                    },
+                    "securityScheme": {},
+                    "commonParameters": {
+                      "query": [],
+                      "body": [],
+                      "cookie": [],
+                      "header": []
+                    },
+                    "responses": [
+                      {
+                        "id": "184864319",
+                        "code": 200,
+                        "name": "Success",
+                        "headers": [],
+                        "jsonSchema": {
+                          "type": "object",
+                          "properties": {},
+                          "x-apidog-orders": []
+                        },
+                        "itemSchema": {},
+                        "description": "",
+                        "contentType": "json",
+                        "mediaType": ""
+                      }
+                    ],
+                    "responseExamples": [
+                      {
+                        "name": "OK",
+                        "data": "{\"id\":9,\"serial_number\":\"RAM-16GB-001\",\"name\":\"Corsair Vengeance LPX 16GB DDR4 3200MHz\",\"category\":\"RAM\",\"status\":\"In-stock\",\"purchase_id\":7,\"parent_device_id\":1,\"created_at\":\"2026-03-10T03:01:01.000000Z\",\"updated_at\":\"2026-03-10T03:27:56.000000Z\",\"purchase\":{\"id\":7,\"po_number\":\"PO-2026-001\",\"vendor_name\":\"Dell Thailand Co., Ltd.\",\"purchase_date\":\"2026-03-01T00:00:00.000000Z\",\"warranty_expire_date\":\"2029-03-01T00:00:00.000000Z\",\"created_at\":\"2026-03-10T02:34:54.000000Z\",\"updated_at\":\"2026-03-10T02:34:54.000000Z\",\"sequence\":\"001\",\"tax_id\":\"0101234567890\",\"branch\":\"\\u0e2a\\u0e33\\u0e19\\u0e31\\u0e01\\u0e07\\u0e32\\u0e19\\u0e43\\u0e2b\\u0e0d\\u0e48\",\"item_value\":\"150000.00\",\"vat_amount\":\"10500.00\",\"total_amount\":\"160500.00\",\"notes\":\"\\u0e2a\\u0e31\\u0e48\\u0e07\\u0e0b\\u0e37\\u0e49\\u0e2d\\u0e2d\\u0e38\\u0e1b\\u0e01\\u0e23\\u0e13\\u0e4c\\u0e04\\u0e2d\\u0e21\\u0e1e\\u0e34\\u0e27\\u0e40\\u0e15\\u0e2d\\u0e23\\u0e4c\\u0e2a\\u0e33\\u0e2b\\u0e23\\u0e31\\u0e1a\\u0e41\\u0e1c\\u0e19\\u0e01 IT\"},\"parent_device\":{\"id\":1,\"serial_number\":\"PC-CASE-001\",\"name\":\"Fractal Design Define 7 Compact\",\"category\":\"Desktop\",\"status\":\"In-stock\",\"purchase_id\":7,\"created_at\":\"2026-03-10T03:13:13.000000Z\",\"updated_at\":\"2026-03-10T03:13:13.000000Z\"},\"repair_histories\":[]}",
+                        "responseId": "184864319",
+                        "description": "",
+                        "oasKey": "",
+                        "oasExtensions": ""
+                      }
+                    ],
+                    "requestBody": {
+                      "type": "none",
+                      "parameters": [],
+                      "examples": [],
+                      "mediaType": "",
+                      "oasExtensions": "",
+                      "required": true,
+                      "additionalContentTypes": []
+                    },
+                    "description": "",
+                    "tags": [],
+                    "status": "developing",
+                    "serverId": "",
+                    "operationId": "",
+                    "sourceUrl": "",
+                    "ordering": 30,
+                    "cases": [],
+                    "mocks": [],
+                    "customApiFields": "{}",
+                    "advancedSettings": {
+                      "disabledSystemHeaders": {}
+                    },
+                    "mockScript": {},
+                    "codeSamples": [],
+                    "commonResponseStatus": {},
+                    "responseChildren": [],
+                    "visibility": "INHERITED",
+                    "moduleId": 1130419,
+                    "oasExtensions": "",
+                    "type": "http",
+                    "preProcessors": [],
+                    "postProcessors": [],
+                    "inheritPostProcessors": {},
+                    "inheritPreProcessors": {}
+                  }
+                }
+              ]
+            },
+            {
+              "name": "login",
+              "api": {
+                "id": "30570904",
+                "method": "post",
+                "path": "http://192.168.1.94:8000/api/auth/login",
+                "parameters": {
+                  "path": [],
+                  "query": [],
+                  "cookie": [],
+                  "header": []
+                },
+                "auth": {},
+                "securityScheme": {},
+                "commonParameters": {
+                  "query": [],
+                  "body": [],
+                  "cookie": [],
+                  "header": []
+                },
+                "responses": [
+                  {
+                    "id": "125999873",
+                    "code": 200,
+                    "name": "Success",
+                    "headers": [],
+                    "jsonSchema": {
+                      "type": "object",
+                      "properties": {},
+                      "x-apidog-orders": []
+                    },
+                    "itemSchema": {},
+                    "description": "",
+                    "contentType": "json",
+                    "mediaType": ""
+                  }
+                ],
+                "responseExamples": [
+                  {
+                    "name": "OK",
+                    "data": "{\"message\":\"Login successful\",\"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhZGRwYXktZXF1aXBtZW50LXN5c3RlbSIsImF1ZCI6IndlYiIsInN1YiI6NCwiaWF0IjoxNzcyNjEwMjEzLCJleHAiOjE3NzI2OTY2MTMsIm5iZiI6MTc3MjYxMDIxMywiZGF0YSI6eyJpZCI6NCwiZW1haWwiOiJmaWZhQGFkZHBheS5jb20iLCJyb2xlIjoiSVRfU3VwcG9ydCJ9fQ.ZuPIG2Z0c6R_C3QwrChQgb9DVX4_jCm849dhB4j6TnY\",\"user\":{\"id\":4,\"name\":\"John Doe\",\"email\":\"fifa@addpay.com\",\"role\":\"IT_Support\"}}",
+                    "responseId": "125999873",
+                    "description": "",
+                    "oasKey": "",
+                    "oasExtensions": ""
+                  }
+                ],
+                "requestBody": {
+                  "type": "application/json",
+                  "parameters": [],
+                  "jsonSchema": {
+                    "type": "object",
+                    "properties": {},
+                    "x-apidog-orders": []
+                  },
+                  "examples": [
+                    {
+                      "mediaType": "application/json",
+                      "value": "\r\n{\r\n  \"email\": \"admin@addpay.com\",\r\n  \"password\": \"password123\"\r\n}"
+                    }
+                  ],
+                  "mediaType": "",
+                  "oasExtensions": "",
+                  "required": true,
+                  "additionalContentTypes": []
+                },
+                "description": "",
+                "tags": [],
+                "status": "developing",
+                "serverId": "",
+                "operationId": "",
+                "sourceUrl": "",
+                "ordering": 6,
+                "cases": [],
+                "mocks": [],
+                "customApiFields": "{}",
+                "advancedSettings": {
+                  "disabledSystemHeaders": {}
+                },
+                "mockScript": {},
+                "codeSamples": [],
+                "commonResponseStatus": {},
+                "responseChildren": [],
+                "visibility": "INHERITED",
+                "moduleId": 1130419,
+                "oasExtensions": "",
+                "type": "http",
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {},
+                "inheritPreProcessors": {}
+              }
+            },
+            {
+              "name": "register",
+              "api": {
+                "id": "30570905",
+                "method": "post",
+                "path": "http://192.168.1.109:8000/api/auth/register",
+                "parameters": {
+                  "path": [],
+                  "query": [],
+                  "cookie": [],
+                  "header": []
+                },
+                "auth": {},
+                "securityScheme": {},
+                "commonParameters": {
+                  "query": [],
+                  "body": [],
+                  "cookie": [],
+                  "header": []
+                },
+                "responses": [
+                  {
+                    "id": "191322103",
+                    "code": 200,
+                    "name": "Success",
+                    "headers": [],
+                    "jsonSchema": {
+                      "type": "object",
+                      "properties": {},
+                      "x-apidog-orders": []
+                    },
+                    "itemSchema": {},
+                    "description": "",
+                    "contentType": "json",
+                    "mediaType": ""
+                  }
+                ],
+                "responseExamples": [
+                  {
+                    "name": "Unprocessable Entity",
+                    "data": "{\"email\":[\"The email has already been taken.\"]}",
+                    "responseId": "191322103",
+                    "description": "",
+                    "oasKey": "",
+                    "oasExtensions": ""
+                  }
+                ],
+                "requestBody": {
+                  "type": "application/json",
+                  "parameters": [],
+                  "jsonSchema": {
+                    "type": "object",
+                    "properties": {},
+                    "x-apidog-orders": []
+                  },
+                  "examples": [
+                    {
+                      "mediaType": "application/json",
+                      "value": "{\r\n  \"name\": \"Test Test\",\r\n  \"email\": \"test@addpay.com\",\r\n  \"password\": \"password123\",\r\n  \"role\": \"Admin\"\r\n}"
+                    }
+                  ],
+                  "mediaType": "",
+                  "oasExtensions": "",
+                  "required": true,
+                  "additionalContentTypes": []
+                },
+                "description": "",
+                "tags": [],
+                "status": "developing",
+                "serverId": "",
+                "operationId": "",
+                "sourceUrl": "",
+                "ordering": 12,
+                "cases": [],
+                "mocks": [],
+                "customApiFields": "{}",
+                "advancedSettings": {
+                  "disabledSystemHeaders": {}
+                },
+                "mockScript": {},
+                "codeSamples": [],
+                "commonResponseStatus": {},
+                "responseChildren": [],
+                "visibility": "INHERITED",
+                "moduleId": 1130419,
+                "oasExtensions": "",
+                "type": "http",
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {},
+                "inheritPreProcessors": {}
+              }
+            },
+            {
+              "name": "ดูข้อมูลผู้ใช้ปัจจุบัน",
+              "api": {
+                "id": "30570906",
+                "method": "get",
+                "path": "http://192.168.1.109:8000/api/auth/me",
+                "parameters": {
+                  "path": [],
+                  "query": [],
+                  "cookie": [],
+                  "header": []
+                },
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhZGRwYXktZXF1aXBtZW50LXN5c3RlbSIsImF1ZCI6IndlYiIsInN1YiI6MSwiaWF0IjoxNzcyNjEzMDY3LCJleHAiOjE3NzI2OTk0NjcsIm5iZiI6MTc3MjYxMzA2NywiZGF0YSI6eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBhZGRwYXkuY29tIiwicm9sZSI6IkFkbWluIn19.O2oVB7go9aCoCtanh3lFK6kFa7jq_7v0ogWiTIV4uvE"
+                  }
+                },
+                "securityScheme": {},
+                "commonParameters": {
+                  "query": [],
+                  "body": [],
+                  "cookie": [],
+                  "header": []
+                },
+                "responses": [
+                  {
+                    "id": "122195989",
+                    "code": 200,
+                    "name": "Success",
+                    "headers": [],
+                    "jsonSchema": {
+                      "type": "object",
+                      "properties": {},
+                      "x-apidog-orders": []
+                    },
+                    "itemSchema": {},
+                    "description": "",
+                    "contentType": "json",
+                    "mediaType": ""
+                  }
+                ],
+                "responseExamples": [
+                  {
+                    "name": "Unauthorized",
+                    "data": "{\"error\":\"Token not provided\"}",
+                    "responseId": "122195989",
+                    "description": "",
+                    "oasKey": "",
+                    "oasExtensions": ""
+                  }
+                ],
+                "requestBody": {
+                  "type": "none",
+                  "parameters": [],
+                  "examples": [],
+                  "mediaType": "",
+                  "oasExtensions": "",
+                  "required": true,
+                  "additionalContentTypes": []
+                },
+                "description": "",
+                "tags": [],
+                "status": "developing",
+                "serverId": "",
+                "operationId": "",
+                "sourceUrl": "",
+                "ordering": 18,
+                "cases": [],
+                "mocks": [],
+                "customApiFields": "{}",
+                "advancedSettings": {
+                  "disabledSystemHeaders": {}
+                },
+                "mockScript": {},
+                "codeSamples": [],
+                "commonResponseStatus": {},
+                "responseChildren": [],
+                "visibility": "INHERITED",
+                "moduleId": 1130419,
+                "oasExtensions": "",
+                "type": "http",
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {},
+                "inheritPreProcessors": {}
+              }
+            },
+            {
+              "name": "logout",
+              "api": {
+                "id": "30570907",
+                "method": "post",
+                "path": "http://192.168.1.109:8000/api/auth/logout",
+                "parameters": {
+                  "path": [],
+                  "query": [],
+                  "cookie": [],
+                  "header": []
+                },
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhZGRwYXktZXF1aXBtZW50LXN5c3RlbSIsImF1ZCI6IndlYiIsInN1YiI6MSwiaWF0IjoxNzcyNjEzMDY3LCJleHAiOjE3NzI2OTk0NjcsIm5iZiI6MTc3MjYxMzA2NywiZGF0YSI6eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBhZGRwYXkuY29tIiwicm9sZSI6IkFkbWluIn19.O2oVB7go9aCoCtanh3lFK6kFa7jq_7v0ogWiTIV4uvE"
+                  }
+                },
+                "securityScheme": {},
+                "commonParameters": {
+                  "query": [],
+                  "body": [],
+                  "cookie": [],
+                  "header": []
+                },
+                "responses": [
+                  {
+                    "id": "135498182",
+                    "code": 200,
+                    "name": "Success",
+                    "headers": [],
+                    "jsonSchema": {
+                      "type": "object",
+                      "properties": {},
+                      "x-apidog-orders": []
+                    },
+                    "itemSchema": {},
+                    "description": "",
+                    "contentType": "json",
+                    "mediaType": ""
+                  }
+                ],
+                "responseExamples": [
+                  {
+                    "name": "OK",
+                    "data": "{\"message\":\"Logout successful. Please remove the token from your client.\"}",
+                    "responseId": "135498182",
+                    "description": "",
+                    "oasKey": "",
+                    "oasExtensions": ""
+                  }
+                ],
+                "requestBody": {
+                  "type": "none",
+                  "parameters": [],
+                  "examples": [],
+                  "mediaType": "",
+                  "oasExtensions": "",
+                  "required": true,
+                  "additionalContentTypes": []
+                },
+                "description": "",
+                "tags": [],
+                "status": "developing",
+                "serverId": "",
+                "operationId": "",
+                "sourceUrl": "",
+                "ordering": 24,
+                "cases": [],
+                "mocks": [],
+                "customApiFields": "{}",
+                "advancedSettings": {
+                  "disabledSystemHeaders": {}
+                },
+                "mockScript": {},
+                "codeSamples": [],
+                "commonResponseStatus": {},
+                "responseChildren": [],
+                "visibility": "INHERITED",
+                "moduleId": 1130419,
+                "oasExtensions": "",
+                "type": "http",
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {},
+                "inheritPreProcessors": {}
+              }
+            }
+          ]
+        },
+        {
+          "name": "Repairs",
+          "id": 7204452,
+          "auth": {},
+          "securityScheme": {},
+          "parentId": 0,
+          "serverId": "",
+          "description": "",
+          "identityPattern": {
+            "httpApi": {
+              "type": "inherit",
+              "bodyType": "",
+              "fields": []
+            }
+          },
+          "shareSettings": {},
+          "visibility": "INHERITED",
+          "moduleId": 1130419,
+          "preProcessors": [
+            {
+              "id": "inheritProcessors",
+              "type": "inheritProcessors",
+              "data": {}
+            }
+          ],
+          "postProcessors": [
+            {
+              "id": "inheritProcessors",
+              "type": "inheritProcessors",
+              "data": {}
+            }
+          ],
+          "inheritPostProcessors": {},
+          "inheritPreProcessors": {},
+          "items": [
+            {
+              "name": "ดูรายการอุปกรณ์หลักแต่ละตัว Copy",
+              "api": {
+                "id": "30570924",
+                "method": "post",
+                "path": "http://192.168.1.94:8000/api/devices/9/repairs",
+                "parameters": {
+                  "path": [],
+                  "query": [],
+                  "cookie": [],
+                  "header": []
+                },
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhZGRwYXktZXF1aXBtZW50LXN5c3RlbSIsImF1ZCI6IndlYiIsInN1YiI6MSwiaWF0IjoxNzczMTA3ODM2LCJleHAiOjE3NzMxOTQyMzYsIm5iZiI6MTc3MzEwNzgzNiwiZGF0YSI6eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBhZGRwYXkuY29tIiwicm9sZSI6IkFkbWluIn19.Wg0ePOBpKk16cJOjx0ILbzzyF9BcyaOj4CVEqH-GoVE"
+                  }
+                },
+                "securityScheme": {},
+                "commonParameters": {
+                  "query": [],
+                  "body": [],
+                  "cookie": [],
+                  "header": []
+                },
+                "responses": [
+                  {
+                    "id": "114606644",
+                    "code": 200,
+                    "name": "Success",
+                    "headers": [],
+                    "jsonSchema": {
+                      "type": "object",
+                      "properties": {},
+                      "x-apidog-orders": []
+                    },
+                    "itemSchema": {},
+                    "description": "",
+                    "contentType": "json",
+                    "mediaType": ""
+                  }
+                ],
+                "responseExamples": [
+                  {
+                    "name": "OK",
+                    "data": "{\"id\":9,\"serial_number\":\"RAM-16GB-001\",\"name\":\"Corsair Vengeance LPX 16GB DDR4 3200MHz\",\"category\":\"RAM\",\"status\":\"In-stock\",\"purchase_id\":7,\"parent_device_id\":1,\"created_at\":\"2026-03-10T03:01:01.000000Z\",\"updated_at\":\"2026-03-10T03:27:56.000000Z\",\"purchase\":{\"id\":7,\"po_number\":\"PO-2026-001\",\"vendor_name\":\"Dell Thailand Co., Ltd.\",\"purchase_date\":\"2026-03-01T00:00:00.000000Z\",\"warranty_expire_date\":\"2029-03-01T00:00:00.000000Z\",\"created_at\":\"2026-03-10T02:34:54.000000Z\",\"updated_at\":\"2026-03-10T02:34:54.000000Z\",\"sequence\":\"001\",\"tax_id\":\"0101234567890\",\"branch\":\"\\u0e2a\\u0e33\\u0e19\\u0e31\\u0e01\\u0e07\\u0e32\\u0e19\\u0e43\\u0e2b\\u0e0d\\u0e48\",\"item_value\":\"150000.00\",\"vat_amount\":\"10500.00\",\"total_amount\":\"160500.00\",\"notes\":\"\\u0e2a\\u0e31\\u0e48\\u0e07\\u0e0b\\u0e37\\u0e49\\u0e2d\\u0e2d\\u0e38\\u0e1b\\u0e01\\u0e23\\u0e13\\u0e4c\\u0e04\\u0e2d\\u0e21\\u0e1e\\u0e34\\u0e27\\u0e40\\u0e15\\u0e2d\\u0e23\\u0e4c\\u0e2a\\u0e33\\u0e2b\\u0e23\\u0e31\\u0e1a\\u0e41\\u0e1c\\u0e19\\u0e01 IT\"},\"parent_device\":{\"id\":1,\"serial_number\":\"PC-CASE-001\",\"name\":\"Fractal Design Define 7 Compact\",\"category\":\"Desktop\",\"status\":\"In-stock\",\"purchase_id\":7,\"created_at\":\"2026-03-10T03:13:13.000000Z\",\"updated_at\":\"2026-03-10T03:13:13.000000Z\"},\"repair_histories\":[]}",
+                    "responseId": "114606644",
+                    "description": "",
+                    "oasKey": "",
+                    "oasExtensions": ""
+                  }
+                ],
+                "requestBody": {
+                  "type": "application/json",
+                  "parameters": [],
+                  "jsonSchema": {
+                    "type": "object",
+                    "properties": {},
+                    "x-apidog-orders": []
+                  },
+                  "examples": [
+                    {
+                      "mediaType": "application/json",
+                      "value": "{\r\n  \"issue_description\": \"เมื่อติดตั้งแล้วเครื่องขึ้นจอฟ้าบ่อย\",\r\n  \"repair_date\": \"2026-03-11\",\r\n  \"return_date\": null,\r\n  \"cost\": 500,\r\n  \"technician_name\": \"สมชาย ช่างซ่อม\"\r\n}"
+                    }
+                  ],
+                  "mediaType": "",
+                  "oasExtensions": "",
+                  "required": true,
+                  "additionalContentTypes": []
+                },
+                "description": "",
+                "tags": [],
+                "status": "developing",
+                "serverId": "",
+                "operationId": "",
+                "sourceUrl": "",
+                "ordering": 6,
+                "cases": [],
+                "mocks": [],
+                "customApiFields": "{}",
+                "advancedSettings": {
+                  "disabledSystemHeaders": {}
+                },
+                "mockScript": {},
+                "codeSamples": [],
+                "commonResponseStatus": {},
+                "responseChildren": [],
+                "visibility": "INHERITED",
+                "moduleId": 1130419,
+                "oasExtensions": "",
+                "type": "http",
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {},
+                "inheritPreProcessors": {}
+              }
+            },
+            {
+              "name": "ดูรายการอุปกรณ์หลักแต่ละตัว Copy Copy",
+              "api": {
+                "id": "30570925",
+                "method": "post",
+                "path": "http://192.168.1.94:8000/api/devices/9/repairs/1/complete",
+                "parameters": {
+                  "path": [],
+                  "query": [],
+                  "cookie": [],
+                  "header": []
+                },
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhZGRwYXktZXF1aXBtZW50LXN5c3RlbSIsImF1ZCI6IndlYiIsInN1YiI6MSwiaWF0IjoxNzczMTA3ODM2LCJleHAiOjE3NzMxOTQyMzYsIm5iZiI6MTc3MzEwNzgzNiwiZGF0YSI6eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBhZGRwYXkuY29tIiwicm9sZSI6IkFkbWluIn19.Wg0ePOBpKk16cJOjx0ILbzzyF9BcyaOj4CVEqH-GoVE"
+                  }
+                },
+                "securityScheme": {},
+                "commonParameters": {
+                  "query": [],
+                  "body": [],
+                  "cookie": [],
+                  "header": []
+                },
+                "responses": [
+                  {
+                    "id": "124526068",
+                    "code": 200,
+                    "name": "Success",
+                    "headers": [],
+                    "jsonSchema": {
+                      "type": "object",
+                      "properties": {},
+                      "x-apidog-orders": []
+                    },
+                    "itemSchema": {},
+                    "description": "",
+                    "contentType": "json",
+                    "mediaType": ""
+                  }
+                ],
+                "responseExamples": [
+                  {
+                    "name": "OK",
+                    "data": "{\"id\":9,\"serial_number\":\"RAM-16GB-001\",\"name\":\"Corsair Vengeance LPX 16GB DDR4 3200MHz\",\"category\":\"RAM\",\"status\":\"In-stock\",\"purchase_id\":7,\"parent_device_id\":1,\"created_at\":\"2026-03-10T03:01:01.000000Z\",\"updated_at\":\"2026-03-10T03:27:56.000000Z\",\"purchase\":{\"id\":7,\"po_number\":\"PO-2026-001\",\"vendor_name\":\"Dell Thailand Co., Ltd.\",\"purchase_date\":\"2026-03-01T00:00:00.000000Z\",\"warranty_expire_date\":\"2029-03-01T00:00:00.000000Z\",\"created_at\":\"2026-03-10T02:34:54.000000Z\",\"updated_at\":\"2026-03-10T02:34:54.000000Z\",\"sequence\":\"001\",\"tax_id\":\"0101234567890\",\"branch\":\"\\u0e2a\\u0e33\\u0e19\\u0e31\\u0e01\\u0e07\\u0e32\\u0e19\\u0e43\\u0e2b\\u0e0d\\u0e48\",\"item_value\":\"150000.00\",\"vat_amount\":\"10500.00\",\"total_amount\":\"160500.00\",\"notes\":\"\\u0e2a\\u0e31\\u0e48\\u0e07\\u0e0b\\u0e37\\u0e49\\u0e2d\\u0e2d\\u0e38\\u0e1b\\u0e01\\u0e23\\u0e13\\u0e4c\\u0e04\\u0e2d\\u0e21\\u0e1e\\u0e34\\u0e27\\u0e40\\u0e15\\u0e2d\\u0e23\\u0e4c\\u0e2a\\u0e33\\u0e2b\\u0e23\\u0e31\\u0e1a\\u0e41\\u0e1c\\u0e19\\u0e01 IT\"},\"parent_device\":{\"id\":1,\"serial_number\":\"PC-CASE-001\",\"name\":\"Fractal Design Define 7 Compact\",\"category\":\"Desktop\",\"status\":\"In-stock\",\"purchase_id\":7,\"created_at\":\"2026-03-10T03:13:13.000000Z\",\"updated_at\":\"2026-03-10T03:13:13.000000Z\"},\"repair_histories\":[]}",
+                    "responseId": "124526068",
+                    "description": "",
+                    "oasKey": "",
+                    "oasExtensions": ""
+                  }
+                ],
+                "requestBody": {
+                  "type": "application/json",
+                  "parameters": [],
+                  "jsonSchema": {
+                    "type": "object",
+                    "properties": {},
+                    "x-apidog-orders": []
+                  },
+                  "examples": [
+                    {
+                      "mediaType": "application/json",
+                      "value": "{\r\n  \"return_date\": \"2026-03-12\",\r\n  \"device_status\": \"In-stock\"\r\n}"
+                    }
+                  ],
+                  "mediaType": "",
+                  "oasExtensions": "",
+                  "required": true,
+                  "additionalContentTypes": []
+                },
+                "description": "",
+                "tags": [],
+                "status": "developing",
+                "serverId": "",
+                "operationId": "",
+                "sourceUrl": "",
+                "ordering": 12,
+                "cases": [],
+                "mocks": [],
+                "customApiFields": "{}",
+                "advancedSettings": {
+                  "disabledSystemHeaders": {}
+                },
+                "mockScript": {},
+                "codeSamples": [],
+                "commonResponseStatus": {},
+                "responseChildren": [],
+                "visibility": "INHERITED",
+                "moduleId": 1130419,
+                "oasExtensions": "",
+                "type": "http",
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {},
+                "inheritPreProcessors": {}
+              }
+            }
+          ]
+        },
+        {
+          "name": "แดชบอร์ด",
+          "api": {
+            "id": "30577162",
+            "method": "get",
+            "path": "http://192.168.1.94:8000/api/dashboard/summary",
+            "parameters": {
+              "header": [
+                {
+                  "name": "Authorization",
+                  "required": true,
+                  "example": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhZGRwYXktZXF1aXBtZW50LXN5c3RlbSIsImF1ZCI6IndlYiIsInN1YiI6MSwiaWF0IjoxNzczMjk3NjM0LCJleHAiOjE3NzMzODQwMzQsIm5iZiI6MTc3MzI5NzYzNCwiZGF0YSI6eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBhZGRwYXkuY29tIiwicm9sZSI6IkFkbWluIn19.THMmoJPhH740KjXd_GY5x-FLsjp9j6YD6FtWzehy2tM",
+                  "description": "",
+                  "id": "ohMF9idtGU",
+                  "type": "string",
+                  "enable": true
+                }
+              ]
+            },
+            "auth": {},
+            "securityScheme": {},
+            "commonParameters": {
+              "query": [],
+              "body": [],
+              "cookie": [],
+              "header": []
+            },
+            "responses": [
+              {
+                "id": "184692085",
+                "code": 200,
+                "name": "OK",
+                "jsonSchema": {
+                  "type": "object",
+                  "properties": {
+                    "success": {
+                      "type": "boolean"
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "devices": {
+                          "type": "object",
+                          "properties": {
+                            "total": {
+                              "type": "integer"
+                            },
+                            "active": {
+                              "type": "integer"
+                            },
+                            "retired": {
+                              "type": "integer"
+                            },
+                            "maintenance": {
+                              "type": "integer"
+                            },
+                            "by_category": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "category": {
+                                    "type": "string"
+                                  },
+                                  "count": {
+                                    "type": "integer"
+                                  }
+                                },
+                                "required": [
+                                  "category",
+                                  "count"
+                                ]
+                              }
+                            }
+                          },
+                          "required": [
+                            "total",
+                            "active",
+                            "retired",
+                            "maintenance",
+                            "by_category"
+                          ]
+                        },
+                        "purchases": {
+                          "type": "object",
+                          "properties": {
+                            "total": {
+                              "type": "integer"
+                            },
+                            "total_amount": {
+                              "type": "integer"
+                            },
+                            "total_vat": {
+                              "type": "integer"
+                            },
+                            "top_vendors": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "vendor_name": {
+                                    "type": "string"
+                                  },
+                                  "purchase_count": {
+                                    "type": "integer"
+                                  },
+                                  "total_spent": {
+                                    "type": "integer"
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "required": [
+                            "total",
+                            "total_amount",
+                            "total_vat",
+                            "top_vendors"
+                          ]
+                        },
+                        "repairs": {
+                          "type": "object",
+                          "properties": {
+                            "this_month": {
+                              "type": "object",
+                              "properties": {
+                                "count": {
+                                  "type": "integer"
+                                },
+                                "total_cost": {
+                                  "type": "integer"
+                                }
+                              },
+                              "required": [
+                                "count",
+                                "total_cost"
+                              ]
+                            },
+                            "pending": {
+                              "type": "integer"
+                            },
+                            "top_devices": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "id": {
+                                    "type": "integer"
+                                  },
+                                  "name": {
+                                    "type": "string"
+                                  },
+                                  "category": {
+                                    "type": "string"
+                                  },
+                                  "serial_number": {
+                                    "type": "string"
+                                  },
+                                  "status": {
+                                    "type": "string"
+                                  },
+                                  "repair_count": {
+                                    "type": "integer"
+                                  }
+                                },
+                                "required": [
+                                  "id",
+                                  "name",
+                                  "category",
+                                  "serial_number",
+                                  "status",
+                                  "repair_count"
+                                ]
+                              }
+                            }
+                          },
+                          "required": [
+                            "this_month",
+                            "pending",
+                            "top_devices"
+                          ]
+                        },
+                        "warranty": {
+                          "type": "object",
+                          "properties": {
+                            "expired_count": {
+                              "type": "integer"
+                            },
+                            "warning_count": {
+                              "type": "integer"
+                            },
+                            "expired_details": {
+                              "type": "array",
+                              "items": {}
+                            },
+                            "warning_details": {
+                              "type": "array",
+                              "items": {}
+                            }
+                          },
+                          "required": [
+                            "expired_count",
+                            "warning_count",
+                            "expired_details",
+                            "warning_details"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "devices",
+                        "purchases",
+                        "repairs",
+                        "warranty"
+                      ]
+                    },
+                    "timestamp": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "success",
+                    "data",
+                    "timestamp"
+                  ]
+                },
+                "contentType": "json"
+              }
+            ],
+            "responseExamples": [],
+            "requestBody": {
+              "type": "multipart/form-data",
+              "parameters": [],
+              "mediaType": "",
+              "examples": [],
+              "oasExtensions": ""
+            },
+            "description": "",
+            "tags": [],
+            "status": "developing",
+            "serverId": "",
+            "operationId": "",
+            "sourceUrl": "",
+            "ordering": 22,
+            "cases": [],
+            "mocks": [],
+            "customApiFields": "{}",
+            "advancedSettings": {
+              "disabledSystemHeaders": {}
+            },
+            "mockScript": {},
+            "codeSamples": [],
+            "commonResponseStatus": {},
+            "responseChildren": [],
+            "visibility": "INHERITED",
+            "moduleId": 1130419,
+            "oasExtensions": "",
+            "type": "http",
+            "preProcessors": [],
+            "postProcessors": [],
+            "inheritPostProcessors": {},
+            "inheritPreProcessors": {}
+          }
+        },
+        {
+          "name": "ค้นหาอุปกรณ์หลัก",
+          "api": {
+            "id": "30570902",
+            "method": "get",
+            "path": "http://192.168.1.94:8000/api/devices/search/parents",
+            "parameters": {
+              "path": [],
+              "query": [
+                {
+                  "id": "KLZ91wtJ63",
+                  "name": "category",
+                  "required": false,
+                  "enable": true,
+                  "description": "",
+                  "example": [
+                    "Desktop"
+                  ],
+                  "type": "array"
+                },
+                {
+                  "id": "FYdj1tguQN",
+                  "name": "today",
+                  "required": false,
+                  "enable": true,
+                  "description": "",
+                  "example": [
+                    "false"
+                  ],
+                  "type": "array"
+                },
+                {
+                  "id": "rOcr4b47Di",
+                  "name": "status",
+                  "required": false,
+                  "enable": true,
+                  "description": "",
+                  "example": [
+                    "In-stock"
+                  ],
+                  "type": "array"
+                },
+                {
+                  "id": "3u8sUhSIGK",
+                  "name": "name",
+                  "required": false,
+                  "enable": true,
+                  "description": "",
+                  "example": "Fractal",
+                  "type": "string"
+                }
+              ],
+              "cookie": [],
+              "header": []
+            },
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhZGRwYXktZXF1aXBtZW50LXN5c3RlbSIsImF1ZCI6IndlYiIsInN1YiI6MSwiaWF0IjoxNzczMTk3NTI2LCJleHAiOjE3NzMyODM5MjYsIm5iZiI6MTc3MzE5NzUyNiwiZGF0YSI6eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBhZGRwYXkuY29tIiwicm9sZSI6IkFkbWluIn19.iPDkjDomgbRvXLwpn7dsbtLaLpsJP7NdfcvJzQQj-wA"
+              }
+            },
+            "securityScheme": {},
+            "commonParameters": {
+              "query": [],
+              "body": [],
+              "cookie": [],
+              "header": []
+            },
+            "responses": [
+              {
+                "id": "180091553",
+                "code": 200,
+                "name": "Success",
+                "headers": [],
+                "jsonSchema": {
+                  "type": "object",
+                  "properties": {},
+                  "x-apidog-orders": []
+                },
+                "itemSchema": {},
+                "description": "",
+                "contentType": "json",
+                "mediaType": ""
+              }
+            ],
+            "responseExamples": [
+              {
+                "name": "OK",
+                "data": "[{\"id\":1,\"serial_number\":\"PC-CASE-001\",\"name\":\"Fractal Design Define 7 Compact\",\"category\":\"Desktop\",\"status\":\"In-stock\",\"purchase_id\":7,\"created_at\":\"2026-03-10T03:13:13.000000Z\",\"updated_at\":\"2026-03-10T03:13:13.000000Z\",\"purchase\":{\"id\":7,\"po_number\":\"PO-2026-001\",\"vendor_name\":\"Dell Thailand Co., Ltd.\",\"purchase_date\":\"2026-03-01T00:00:00.000000Z\",\"warranty_expire_date\":\"2029-03-01T00:00:00.000000Z\",\"created_at\":\"2026-03-10T02:34:54.000000Z\",\"updated_at\":\"2026-03-10T02:34:54.000000Z\",\"sequence\":\"001\",\"tax_id\":\"0101234567890\",\"branch\":\"\\u0e2a\\u0e33\\u0e19\\u0e31\\u0e01\\u0e07\\u0e32\\u0e19\\u0e43\\u0e2b\\u0e0d\\u0e48\",\"item_value\":\"150000.00\",\"vat_amount\":\"10500.00\",\"total_amount\":\"160500.00\",\"notes\":\"\\u0e2a\\u0e31\\u0e48\\u0e07\\u0e0b\\u0e37\\u0e49\\u0e2d\\u0e2d\\u0e38\\u0e1b\\u0e01\\u0e23\\u0e13\\u0e4c\\u0e04\\u0e2d\\u0e21\\u0e1e\\u0e34\\u0e27\\u0e40\\u0e15\\u0e2d\\u0e23\\u0e4c\\u0e2a\\u0e33\\u0e2b\\u0e23\\u0e31\\u0e1a\\u0e41\\u0e1c\\u0e19\\u0e01 IT\"},\"child_devices\":[{\"id\":9,\"serial_number\":\"RAM-16GB-001\",\"name\":\"Corsair Vengeance LPX 16GB DDR4 3200MHz\",\"category\":\"RAM\",\"status\":\"In-stock\",\"purchase_id\":7,\"parent_device_id\":1,\"created_at\":\"2026-03-10T03:01:01.000000Z\",\"updated_at\":\"2026-03-10T05:05:14.000000Z\"},{\"id\":10,\"serial_number\":\"CPU-I5-001\",\"name\":\"Intel Core i5-12400F\",\"category\":\"CPU\",\"status\":\"In-stock\",\"purchase_id\":7,\"parent_device_id\":1,\"created_at\":\"2026-03-10T03:01:23.000000Z\",\"updated_at\":\"2026-03-10T03:28:09.000000Z\"},{\"id\":11,\"serial_number\":\"GPU-RTX3060-001\",\"name\":\"NVIDIA RTX 3060 12GB\",\"category\":\"Graphics Card\",\"status\":\"In-stock\",\"purchase_id\":7,\"parent_device_id\":1,\"created_at\":\"2026-03-10T03:01:45.000000Z\",\"updated_at\":\"2026-03-10T03:28:18.000000Z\"}]}]",
+                "responseId": "180091553",
+                "description": "",
+                "oasKey": "",
+                "oasExtensions": ""
+              }
+            ],
+            "requestBody": {
+              "type": "none",
+              "parameters": [],
+              "examples": [],
+              "mediaType": "",
+              "oasExtensions": "",
+              "required": true,
+              "additionalContentTypes": []
+            },
+            "description": "",
+            "tags": [],
+            "status": "developing",
+            "serverId": "",
+            "operationId": "",
+            "sourceUrl": "",
+            "ordering": 6,
+            "cases": [],
+            "mocks": [],
+            "customApiFields": "{}",
+            "advancedSettings": {
+              "disabledSystemHeaders": {}
+            },
+            "mockScript": {},
+            "codeSamples": [],
+            "commonResponseStatus": {},
+            "responseChildren": [],
+            "visibility": "INHERITED",
+            "moduleId": 1130419,
+            "oasExtensions": "",
+            "type": "http",
+            "preProcessors": [],
+            "postProcessors": [],
+            "inheritPostProcessors": {},
+            "inheritPreProcessors": {}
+          }
+        },
+        {
+          "name": "ค้นหาอุปกรณ์ย่อย",
+          "api": {
+            "id": "30570903",
+            "method": "get",
+            "path": "http://192.168.1.94:8000/api/devices/search/components",
+            "parameters": {
+              "path": [],
+              "query": [
+                {
+                  "id": "KLZ91wtJ63",
+                  "name": "category",
+                  "required": false,
+                  "enable": true,
+                  "description": "",
+                  "example": [
+                    "RAM"
+                  ],
+                  "type": "array"
+                },
+                {
+                  "id": "FYdj1tguQN",
+                  "name": "today",
+                  "required": false,
+                  "enable": true,
+                  "description": "",
+                  "example": [
+                    "false"
+                  ],
+                  "type": "array"
+                },
+                {
+                  "id": "rOcr4b47Di",
+                  "name": "status",
+                  "required": false,
+                  "enable": true,
+                  "description": "",
+                  "example": [
+                    "In-stock"
+                  ],
+                  "type": "array"
+                },
+                {
+                  "id": "3u8sUhSIGK",
+                  "name": "name",
+                  "required": false,
+                  "enable": true,
+                  "description": "",
+                  "example": [
+                    "Kingston DDR4 8GB 3200MHz"
+                  ],
+                  "type": "array"
+                }
+              ],
+              "cookie": [],
+              "header": []
+            },
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhZGRwYXktZXF1aXBtZW50LXN5c3RlbSIsImF1ZCI6IndlYiIsInN1YiI6MSwiaWF0IjoxNzczMTk3NTI2LCJleHAiOjE3NzMyODM5MjYsIm5iZiI6MTc3MzE5NzUyNiwiZGF0YSI6eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBhZGRwYXkuY29tIiwicm9sZSI6IkFkbWluIn19.iPDkjDomgbRvXLwpn7dsbtLaLpsJP7NdfcvJzQQj-wA"
+              }
+            },
+            "securityScheme": {},
+            "commonParameters": {
+              "query": [],
+              "body": [],
+              "cookie": [],
+              "header": []
+            },
+            "responses": [
+              {
+                "id": "187780148",
+                "code": 200,
+                "name": "Success",
+                "headers": [],
+                "jsonSchema": {
+                  "type": "object",
+                  "properties": {},
+                  "x-apidog-orders": []
+                },
+                "itemSchema": {},
+                "description": "",
+                "contentType": "json",
+                "mediaType": ""
+              }
+            ],
+            "responseExamples": [
+              {
+                "name": "OK",
+                "data": "[{\"id\":1,\"serial_number\":\"PC-CASE-001\",\"name\":\"Fractal Design Define 7 Compact\",\"category\":\"Desktop\",\"status\":\"In-stock\",\"purchase_id\":7,\"created_at\":\"2026-03-10T03:13:13.000000Z\",\"updated_at\":\"2026-03-10T03:13:13.000000Z\",\"purchase\":{\"id\":7,\"po_number\":\"PO-2026-001\",\"vendor_name\":\"Dell Thailand Co., Ltd.\",\"purchase_date\":\"2026-03-01T00:00:00.000000Z\",\"warranty_expire_date\":\"2029-03-01T00:00:00.000000Z\",\"created_at\":\"2026-03-10T02:34:54.000000Z\",\"updated_at\":\"2026-03-10T02:34:54.000000Z\",\"sequence\":\"001\",\"tax_id\":\"0101234567890\",\"branch\":\"\\u0e2a\\u0e33\\u0e19\\u0e31\\u0e01\\u0e07\\u0e32\\u0e19\\u0e43\\u0e2b\\u0e0d\\u0e48\",\"item_value\":\"150000.00\",\"vat_amount\":\"10500.00\",\"total_amount\":\"160500.00\",\"notes\":\"\\u0e2a\\u0e31\\u0e48\\u0e07\\u0e0b\\u0e37\\u0e49\\u0e2d\\u0e2d\\u0e38\\u0e1b\\u0e01\\u0e23\\u0e13\\u0e4c\\u0e04\\u0e2d\\u0e21\\u0e1e\\u0e34\\u0e27\\u0e40\\u0e15\\u0e2d\\u0e23\\u0e4c\\u0e2a\\u0e33\\u0e2b\\u0e23\\u0e31\\u0e1a\\u0e41\\u0e1c\\u0e19\\u0e01 IT\"},\"child_devices\":[{\"id\":9,\"serial_number\":\"RAM-16GB-001\",\"name\":\"Corsair Vengeance LPX 16GB DDR4 3200MHz\",\"category\":\"RAM\",\"status\":\"In-stock\",\"purchase_id\":7,\"parent_device_id\":1,\"created_at\":\"2026-03-10T03:01:01.000000Z\",\"updated_at\":\"2026-03-10T05:05:14.000000Z\"},{\"id\":10,\"serial_number\":\"CPU-I5-001\",\"name\":\"Intel Core i5-12400F\",\"category\":\"CPU\",\"status\":\"In-stock\",\"purchase_id\":7,\"parent_device_id\":1,\"created_at\":\"2026-03-10T03:01:23.000000Z\",\"updated_at\":\"2026-03-10T03:28:09.000000Z\"},{\"id\":11,\"serial_number\":\"GPU-RTX3060-001\",\"name\":\"NVIDIA RTX 3060 12GB\",\"category\":\"Graphics Card\",\"status\":\"In-stock\",\"purchase_id\":7,\"parent_device_id\":1,\"created_at\":\"2026-03-10T03:01:45.000000Z\",\"updated_at\":\"2026-03-10T03:28:18.000000Z\"}]}]",
+                "responseId": "187780148",
+                "description": "",
+                "oasKey": "",
+                "oasExtensions": ""
+              }
+            ],
+            "requestBody": {
+              "type": "none",
+              "parameters": [],
+              "examples": [],
+              "mediaType": "",
+              "oasExtensions": "",
+              "required": true,
+              "additionalContentTypes": []
+            },
+            "description": "",
+            "tags": [],
+            "status": "developing",
+            "serverId": "",
+            "operationId": "",
+            "sourceUrl": "",
+            "ordering": 12,
+            "cases": [],
+            "mocks": [],
+            "customApiFields": "{}",
+            "advancedSettings": {
+              "disabledSystemHeaders": {}
+            },
+            "mockScript": {},
+            "codeSamples": [],
+            "commonResponseStatus": {},
+            "responseChildren": [],
+            "visibility": "INHERITED",
+            "moduleId": 1130419,
+            "oasExtensions": "",
+            "type": "http",
+            "preProcessors": [],
+            "postProcessors": [],
+            "inheritPostProcessors": {},
+            "inheritPreProcessors": {}
+          }
+        }
+      ]
+    }
+  ],
+  "socketCollection": [],
+  "docCollection": [],
+  "webSocketCollection": [],
+  "socketIOCollection": [],
+  "mcpClientCollection": [],
+  "responseCollection": [],
+  "schemaCollection": [],
+  "securitySchemeCollection": [],
+  "oasComponentCollection": [],
+  "requestCollection": [
+    {
+      "name": "Root",
+      "children": [],
+      "ordering": [
+        "requestFolder.9535435"
+      ],
+      "items": []
+    }
+  ],
+  "environments": [],
+  "commonScripts": [],
+  "globalVariables": [],
+  "commonParameters": null,
+  "customFunctions": [],
+  "projectTestCaseCategories": [
+    {
+      "id": 1035051,
+      "name": "Positive",
+      "description": "Valid inputs and correct expected results, representing typical usage."
+    },
+    {
+      "id": 1035052,
+      "name": "Negative",
+      "description": "Negative, invalid inputs such as missing fields, wrong types, unsupported methods, etc."
+    },
+    {
+      "id": 1035053,
+      "name": "Boundary",
+      "description": "Extreme or edge conditions, such as maximum string length, empty values, zero, null, etc."
+    },
+    {
+      "id": 1035054,
+      "name": "Security",
+      "description": "Test cases that may expose API security risks."
+    },
+    {
+      "id": 1035055,
+      "name": "Other",
+      "description": "Test cases not classified under existing categories."
+    }
+  ],
+  "projectTestCaseTags": [
+    {
+      "id": 4099246,
+      "name": "Required Fields Only",
+      "description": "Send only the required fields with valid values, omitting all optional fields, to test minimal valid requests."
+    },
+    {
+      "id": 4099247,
+      "name": "Valid Semantic",
+      "description": "Use values that are syntactically correct and also make sense in the business logic or domain context."
+    },
+    {
+      "id": 4099248,
+      "name": "Enum Combination Coverage",
+      "description": "For all enum-type parameters, apply orthogonal design to systematically construct test case combinations of parameters and their enum values, dedicated to testing enum coverage."
+    },
+    {
+      "id": 4099249,
+      "name": "Other Positive Case",
+      "description": "Provide realistic and valid inputs that match the API specification, producing the correct and expected result."
+    },
+    {
+      "id": 4099250,
+      "name": "Missing Required Fields",
+      "description": "Omit one or more required fields in the request body or parameters."
+    },
+    {
+      "id": 4099251,
+      "name": "Invalid Values",
+      "description": "Provide values that are within the correct type and format, but logically invalid for the field."
+    },
+    {
+      "id": 4099252,
+      "name": "Type Errors",
+      "description": "Use values with incorrect data types, such as sending a string instead of an integer."
+    },
+    {
+      "id": 4099253,
+      "name": "Format Errors",
+      "description": "Provide values in an incorrect format, e.g., wrong date pattern, malformed email address."
+    },
+    {
+      "id": 4099254,
+      "name": "Semantic Errors",
+      "description": "Use syntactically correct and properly formatted values that are logically impossible or violate domain rules."
+    },
+    {
+      "id": 4099255,
+      "name": "Other Negative Case",
+      "description": "Provide invalid or unexpected inputs that should trigger error handling or rejection by the API."
+    },
+    {
+      "id": 4099256,
+      "name": "Null",
+      "description": "Must be the JSON literal `null` (not empty, not \"null\")."
+    },
+    {
+      "id": 4099257,
+      "name": "Zero",
+      "description": "Must be the numeric literal 0."
+    },
+    {
+      "id": 4099258,
+      "name": "Empty Values",
+      "description": "Must be \"\"."
+    },
+    {
+      "id": 4099259,
+      "name": "Max Values",
+      "description": "Provide the exact minimum and maximum allowed values for numeric or date fields."
+    },
+    {
+      "id": 4099260,
+      "name": "Min Values",
+      "description": "Provide the exact minimum and maximum allowed values for numeric or date fields."
+    },
+    {
+      "id": 4099261,
+      "name": "Overflow",
+      "description": "Provide values just beyond the allowed minimum or maximum boundaries."
+    },
+    {
+      "id": 4099262,
+      "name": "Underflow",
+      "description": "Provide values just beyond the allowed minimum or maximum boundaries."
+    },
+    {
+      "id": 4099263,
+      "name": "Overly Long Strings",
+      "description": "Provide strings longer than the maximum allowed length, or shorter than the minimum required length."
+    },
+    {
+      "id": 4099264,
+      "name": "Overly Short Strings",
+      "description": "Provide strings longer than the maximum allowed length, or shorter than the minimum required length."
+    },
+    {
+      "id": 4099265,
+      "name": "Broken Object Level Authorization",
+      "description": "Users access or manipulate data objects without proper authorization."
+    },
+    {
+      "id": 4099266,
+      "name": "Access Control",
+      "description": "Restricting resources and actions users can access based on roles, permissions, or attributes."
+    },
+    {
+      "id": 4099267,
+      "name": "Auth Failures",
+      "description": "Authentication is weak, misconfigured, or bypassed, allowing unauthorized access."
+    },
+    {
+      "id": 4099268,
+      "name": "SQL Injection",
+      "description": "Insert malicious SQL code into input fields to test for SQL injection vulnerabilities."
+    },
+    {
+      "id": 4099269,
+      "name": "XSS Injection",
+      "description": "Inject JavaScript or HTML tags to test for cross-site scripting vulnerabilities."
+    },
+    {
+      "id": 4099270,
+      "name": "Fuzzy Input",
+      "description": "Send large or randomly generated payloads to test input validation and stability."
+    },
+    {
+      "id": 4099271,
+      "name": "Command Injection",
+      "description": "Insert shell commands into inputs to test for command execution vulnerabilities."
+    },
+    {
+      "id": 4099272,
+      "name": "JSON Injection",
+      "description": "Insert malicious or unexpected JSON structures to test parsing and validation."
+    },
+    {
+      "id": 4099273,
+      "name": "NoSQL Injection",
+      "description": "Provide NoSQL-specific malicious queries or operators to test for injection vulnerabilities."
+    },
+    {
+      "id": 4099274,
+      "name": "Other",
+      "description": "Test cases not classified under existing categories."
+    }
+  ],
+  "projectAssociations": [],
+  "moduleSettings": [
+    {
+      "id": "1130419",
+      "name": "Default module",
+      "description": "",
+      "moduleVariables": [],
+      "openApiInfo": {}
+    }
+  ]
+}
